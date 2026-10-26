@@ -1,0 +1,74 @@
+[
+ {
+  "allocation": "TEAM (Locked)",
+  "address": "0xbCee2DEfb7cF136480e3619Cf93E8129059977aF",
+  "qty": "1,000,000,000",
+  "sentToTreasury": "1,000,000,000",
+  "stillToSend": "-",
+  "balance ": "1,000,000,000"
+ },
+ {
+  "allocation": "Governance (Locked)",
+  "address": "0x9a83957d3399CBBCbEf2112797B4a5B8e58C63d4",
+  "qty": "200,000,000",
+  "sentToTreasury": "200,000,000",
+  "stillToSend": "-",
+  "balance ": "166666667"
+ },
+ {
+  "allocation": "Governance (Unlocked)",
+  "address": "0x9E678318539D7C98057e9F89c58fb8f99752FaeA",
+  "qty": "100,000,000",
+  "sentToTreasury": "-",
+  "stillToSend": "100,000,000",
+  "balance ": "33333423"
+ },
+ {
+  "allocation": "USYD/CSIRO (Locked)",
+  "address": "0xAC27381EF74457c1258d54a808C2461eEdc56270",
+  "qty": "200,000,000",
+  "sentToTreasury": "200,000,000",
+  "stillToSend": "-",
+  "balance ": "200,000,000"
+ },
+ {
+  "allocation": "Investors",
+  "address": "0xeF816D556E01BC194AE302999930EAcD6dc4e566",
+  "qty": "2,785,987,083",
+  "sentToTreasury": "2,785,987,083",
+  "stillToSend": "-",
+  "balance ": "-"
+ },
+ {
+  "allocation": "Reserve",
+  "address": "0x7473fEAf836b5319D9190d8367991Dc6ef33C16d",
+  "qty": "2,000,000,000",
+  "sentToTreasury": "2,000,000,000",
+  "stillToSend": "-",
+  "balance ": "2,000,000,000"
+ },
+ {
+  "allocation": "Ecosystem (Locked)",
+  "address": "0xC5c131572d232512973e79204B93C2c1D57c879D",
+  "qty": "2,794,132,788",
+  "sentToTreasury": "2,794,132,788",
+  "stillToSend": "-",
+  "balance ": "2,794,132,788"
+ },
+ {
+  "allocation": "Ecosystem 2 (Unlocked)",
+  "address": "0xE0c701c40166BBD8D5f5Ec33c123F0A03E902DF7",
+  "qty": "-",
+  "sentToTreasury": "-",
+  "stillToSend": "-",
+  "balance ": "485100801"
+ },
+ {
+  "allocation": "Ecosystem (Unlocked)",
+  "address": "0x415cAD8Fc89F75a63C5B830E06460EEcdE083C9F",
+  "qty": "919,880,129",
+  "sentToTreasury": "-",
+  "stillToSend": "919,880,129",
+  "balance ": "454409079.426738"
+ }
+]

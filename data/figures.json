@@ -1,0 +1,709 @@
+{
+ "blocks": {
+  "start": 3025809,
+  "end": 3209414
+ },
+ "native_total_start": 9933391159.204966,
+ "economic_total_start": 9933391159.204966,
+ "wrbnt_supply_start": 1819066450.6643624,
+ "wrbnt_backing_start": 1819066450.6643624,
+ "wrbnt_sum_holders_start": 1819066450.6643624,
+ "nolock_userinfo_sum_start": 358606856.2784972,
+ "lock365_userinfo_sum_start": 277156292.00327575,
+ "native_total_end": 9931942638.68492,
+ "economic_total_end": 9931942638.68492,
+ "wrbnt_supply_end": 1736902022.3492532,
+ "wrbnt_backing_end": 1736902022.3492532,
+ "wrbnt_sum_holders_end": 1736902022.3492532,
+ "nolock_userinfo_sum_end": 440677249.9092804,
+ "lock365_userinfo_sum_end": 310573757.56034917,
+ "supply_map": [
+  {
+   "category": "Redbelly reserved wallets",
+   "start": 5974809361.36208,
+   "end": 5930989287.350195,
+   "change": -43820074.01188469,
+   "addresses_start": 8,
+   "addresses_end": 9
+  },
+  {
+   "category": "Reddex staking pools",
+   "start": 3299174.6173063344,
+   "end": 3525544.694634995,
+   "change": 226370.07732866053,
+   "addresses_start": 2,
+   "addresses_end": 2
+  },
+  {
+   "category": "Bridge (RBNT Native OFT Adapter)",
+   "start": 38271942.807196,
+   "end": 43192466.611256,
+   "change": 4920523.804060005,
+   "addresses_start": 1,
+   "addresses_end": 1
+  },
+  {
+   "category": "Token vesting contracts",
+   "start": 1520016418.7510688,
+   "end": 1446088105.4022799,
+   "change": -73928313.34878898,
+   "addresses_start": 16,
+   "addresses_end": 16
+  },
+  {
+   "category": "Other smart contracts",
+   "start": 613972023.7650349,
+   "end": 586064224.5277107,
+   "change": -27907799.237324238,
+   "addresses_start": 101,
+   "addresses_end": 107
+  },
+  {
+   "category": "Labelled exchange wallets",
+   "start": 0.0,
+   "end": 0.0,
+   "change": 0.0,
+   "addresses_start": 0,
+   "addresses_end": 0
+  },
+  {
+   "category": "Zero address",
+   "start": 11.577162380954416,
+   "end": 11.577162380954416,
+   "change": 0.0,
+   "addresses_start": 1,
+   "addresses_end": 1
+  },
+  {
+   "category": "Unnamed wallets",
+   "start": 1783022226.3251178,
+   "end": 1922082998.5216796,
+   "change": 139060772.1965618,
+   "addresses_start": 159861,
+   "addresses_end": 160123
+  }
+ ],
+ "unnamed_staked_start": 635763148.281773,
+ "unnamed_staked_end": 751251007.4696295,
+ "staked_by_category": {
+  "Redbelly reserved wallets": [
+   0.0,
+   0.0
+  ],
+  "Reddex staking pools": [
+   0.0,
+   0.0
+  ],
+  "Bridge (RBNT Native OFT Adapter)": [
+   0.0,
+   0.0
+  ],
+  "Token vesting contracts": [
+   0.0,
+   0.0
+  ],
+  "Other smart contracts": [
+   0.0,
+   0.0
+  ],
+  "Labelled exchange wallets": [
+   0.0,
+   0.0
+  ],
+  "Zero address": [
+   0.0,
+   0.0
+  ],
+  "Unnamed wallets": [
+   635763148.281773,
+   751251007.4696295
+  ]
+ },
+ "concentration": {
+  "start": {
+   "holders": 14441,
+   "total": 1782823813.519999,
+   "top10_share": 0.48437586947134403,
+   "top50_share": 0.6848777635011876,
+   "top100_share": 0.7657365330036378,
+   "top500_share": 0.9327986800811455,
+   "gini": 0.9835114014445434,
+   "median": 64.05326736835806
+  },
+  "end": {
+   "holders": 14552,
+   "total": 1921884383.2494736,
+   "top10_share": 0.4934087862668804,
+   "top50_share": 0.6938640334064136,
+   "top100_share": 0.774415777132372,
+   "top500_share": 0.9365164646616022,
+   "gini": 0.9843717187868217,
+   "median": 66.34624180515446
+  }
+ },
+ "bands": [
+  {
+   "band": "10 \u2013 1K",
+   "wallets_start": 11150,
+   "rbnt_start": 986387.6717289858,
+   "wallets_end": 11232,
+   "rbnt_end": 1002017.5415038669
+  },
+  {
+   "band": "1K \u2013 10K",
+   "wallets_start": 1168,
+   "rbnt_start": 4493650.171654415,
+   "wallets_end": 1198,
+   "rbnt_end": 4565248.334539161
+  },
+  {
+   "band": "10K \u2013 100K",
+   "wallets_start": 1158,
+   "rbnt_start": 40191298.36120101,
+   "wallets_end": 1160,
+   "rbnt_end": 40522873.1276126
+  },
+  {
+   "band": "100K \u2013 1M",
+   "wallets_start": 769,
+   "rbnt_start": 231446871.9652876,
+   "wallets_end": 761,
+   "rbnt_end": 234247404.6318822
+  },
+  {
+   "band": "1M \u2013 10M",
+   "wallets_start": 176,
+   "rbnt_start": 460341045.6794301,
+   "wallets_end": 179,
+   "rbnt_end": 480850490.0206943
+  },
+  {
+   "band": "10M +",
+   "wallets_start": 20,
+   "rbnt_start": 1045364559.670697,
+   "wallets_end": 22,
+   "rbnt_end": 1160696349.5932415
+  }
+ ],
+ "tiers": [
+  {
+   "tier": "Top 10",
+   "wallets": 10,
+   "start": 863556834.7879668,
+   "end": 882860171.7625087,
+   "change": 19303336.974541903,
+   "change_pct": 0.022353290712222248,
+   "grew": 4,
+   "shrank": 2,
+   "about_same": 4,
+   "emptied": 0,
+   "staked_start": 184601890.50473785,
+   "staked_end": 210693778.53611505
+  },
+  {
+   "tier": "11 \u2013 50",
+   "wallets": 40,
+   "start": 357459551.33226836,
+   "end": 375840436.6018672,
+   "change": 18380885.26959884,
+   "change_pct": 0.05142088161049951,
+   "grew": 19,
+   "shrank": 5,
+   "about_same": 16,
+   "emptied": 1,
+   "staked_start": 233339121.55950835,
+   "staked_end": 250980202.43820554
+  },
+  {
+   "tier": "51 \u2013 100",
+   "wallets": 50,
+   "start": 144156939.80089295,
+   "end": 151747732.94136542,
+   "change": 7590793.140472472,
+   "change_pct": 0.05265645310559965,
+   "grew": 20,
+   "shrank": 1,
+   "about_same": 29,
+   "emptied": 0,
+   "staked_start": 80064137.25620599,
+   "staked_end": 89108574.56836095
+  },
+  {
+   "tier": "101 \u2013 500",
+   "wallets": 400,
+   "start": 297842374.1475614,
+   "end": 295572053.33908445,
+   "change": -2270320.808476925,
+   "change_pct": -0.007622558123150502,
+   "grew": 83,
+   "shrank": 25,
+   "about_same": 292,
+   "emptied": 5,
+   "staked_start": 110430828.69660358,
+   "staked_end": 111511816.51252113
+  },
+  {
+   "tier": "501 \u2013 1,000",
+   "wallets": 500,
+   "start": 77523049.49798231,
+   "end": 80358891.50095037,
+   "change": 2835842.002968058,
+   "change_pct": 0.03658063016524997,
+   "grew": 67,
+   "shrank": 35,
+   "about_same": 398,
+   "emptied": 7,
+   "staked_start": 18607586.068984415,
+   "staked_end": 21248914.595507942
+  }
+ ],
+ "top100_turnover": {
+  "stayed": 91,
+  "new_entrants": 9
+ },
+ "staking": {
+  "nolock": {
+   "name": "Reddex staking pool (no lock)",
+   "balance_start": 360594599.05372727,
+   "balance_end": 443228206.0028954,
+   "staked_start": 358606856.2784972,
+   "staked_end": 440677249.9092804,
+   "stakers_start": 1156,
+   "stakers_end": 1140,
+   "reward_funds_start": 1987742.77523005,
+   "reward_funds_end": 2550956.0936149955
+  },
+  "lock365": {
+   "name": "Reddex staking pool (365-day lock)",
+   "balance_start": 278467723.84535205,
+   "balance_end": 311548346.16136914,
+   "staked_start": 277156292.00327575,
+   "staked_end": 310573757.56034917,
+   "stakers_start": 223,
+   "stakers_end": 217,
+   "reward_funds_start": 1311431.8420763016,
+   "reward_funds_end": 974588.6010199785
+  }
+ },
+ "stakers_any_start": 1268,
+ "stakers_any_end": 1255,
+ "reserved": [
+  {
+   "wallet": "TEAM (Locked)",
+   "address": "0xbcee2defb7cf136480e3619cf93e8129059977af",
+   "start": 333909314.0,
+   "end": 333909314.0,
+   "change": 0.0,
+   "native_moves": [],
+   "txs_sent": 0
+  },
+  {
+   "wallet": "Governance (Locked)",
+   "address": "0x9a83957d3399cbbcbef2112797b4a5b8e58c63d4",
+   "start": 133333334.0,
+   "end": 100000001.0,
+   "change": -33333333.0,
+   "native_moves": [
+    {
+     "block": 3175505,
+     "amount": -33333333.0
+    }
+   ],
+   "txs_sent": 0
+  },
+  {
+   "wallet": "Governance (Unlocked)",
+   "address": "0x9e678318539d7c98057e9f89c58fb8f99752faea",
+   "start": 66666756.0,
+   "end": 100000089.0,
+   "change": 33333333.0,
+   "native_moves": [
+    {
+     "block": 3175505,
+     "amount": 33333333.0
+    }
+   ],
+   "txs_sent": 0
+  },
+  {
+   "wallet": "USYD/CSIRO (Locked)",
+   "address": "0xac27381ef74457c1258d54a808c2461eedc56270",
+   "start": 200000000.0,
+   "end": 200000000.0,
+   "change": 0.0,
+   "native_moves": [],
+   "txs_sent": 0
+  },
+  {
+   "wallet": "Investors",
+   "address": "0xef816d556e01bc194ae302999930eacd6dc4e566",
+   "start": 0.0,
+   "end": 253115670.0,
+   "change": 253115670.0,
+   "native_moves": [
+    {
+     "block": 3175499,
+     "amount": 253115670.0
+    }
+   ],
+   "txs_sent": 0
+  },
+  {
+   "wallet": "Reserve",
+   "address": "0x7473feaf836b5319d9190d8367991dc6ef33c16d",
+   "start": 2000000000.0,
+   "end": 2000000000.0,
+   "change": 0.0,
+   "native_moves": [],
+   "txs_sent": 0
+  },
+  {
+   "wallet": "Ecosystem (Locked)",
+   "address": "0xc5c131572d232512973e79204b93c2c1d57c879d",
+   "start": 2794132788.0,
+   "end": 2294132788.0,
+   "change": -500000000.0,
+   "native_moves": [
+    {
+     "block": 3175501,
+     "amount": -500000000.0
+    }
+   ],
+   "txs_sent": 0
+  },
+  {
+   "wallet": "Ecosystem 2 (Unlocked)",
+   "address": "0xe0c701c40166bbd8d5f5ec33c123f0a03e902df7",
+   "start": 377838567.0,
+   "end": 624722897.0,
+   "change": 246884330.0,
+   "native_moves": [
+    {
+     "block": 3175499,
+     "amount": -253115670.0
+    },
+    {
+     "block": 3175501,
+     "amount": 500000000.0
+    }
+   ],
+   "txs_sent": 0
+  },
+  {
+   "wallet": "Ecosystem (Unlocked)",
+   "address": "0x415cad8fc89f75a63c5b830e06460eecde083c9f",
+   "start": 68928602.36207928,
+   "end": 25108528.35019522,
+   "change": -43820074.01188405,
+   "native_moves": [],
+   "txs_sent": 118
+  }
+ ],
+ "eco_unlocked": {
+  "rbnt_out": [
+   {
+    "to": "Wrapped into WRBNT",
+    "rbnt": 25100000.0,
+    "txs": 2,
+    "addresses": 1
+   },
+   {
+    "to": "Reddex staking pools (reward funds)",
+    "rbnt": 15000000.0,
+    "txs": 5,
+    "addresses": 2
+   },
+   {
+    "to": "Unnamed wallets",
+    "rbnt": 3496669.0,
+    "txs": 22,
+    "addresses": 13
+   },
+   {
+    "to": "Other smart contracts",
+    "rbnt": 200000.0,
+    "txs": 2,
+    "addresses": 1
+   }
+  ],
+  "wrbnt_out": [
+   {
+    "to": "Other smart contracts",
+    "wrbnt": 34720848.0,
+    "addresses": 2
+   }
+  ],
+  "wrbnt_in": [
+   {
+    "from": "Token vesting contracts",
+    "wrbnt": 9613167.21816962,
+    "addresses": 1
+   }
+  ],
+  "gas_fees": 15724.23005367072,
+  "txs_sent": 118
+ },
+ "bridge": {
+  "start": 38271942.807196,
+  "end": 43192466.611256,
+  "txs_in": 89,
+  "senders": 14
+ },
+ "pool_flows": {
+  "nolock": {
+   "stake_txs": 262,
+   "stakers_who_staked": 119,
+   "staked_gross": 132965676.60653311,
+   "unstaked_gross": 50895282.97574991,
+   "unstake_txs": 104,
+   "claim_txs": 183,
+   "reward_funding": 5000000.0,
+   "reward_funding_from_reserved": 5000000.0,
+   "reward_funding_txs": 3,
+   "rewards_paid_est": 4436786.6816150835,
+   "failed_txs": 3,
+   "selectors": {
+    "0xb88a802f": 183,
+    "0x3a4b66f1": 262,
+    "0xc2a672e0": 104,
+    "0x": 3
+   }
+  },
+  "lock365": {
+   "stake_txs": 227,
+   "stakers_who_staked": 69,
+   "staked_gross": 63401240.22230019,
+   "unstaked_gross": 29983774.665226802,
+   "unstake_txs": 53,
+   "claim_txs": 263,
+   "reward_funding": 10000000.0,
+   "reward_funding_from_reserved": 10000000.0,
+   "reward_funding_txs": 2,
+   "rewards_paid_est": 10336843.241056256,
+   "failed_txs": 2,
+   "selectors": {
+    "0xb88a802f": 263,
+    "0x3a4b66f1": 227,
+    "0xc2a672e0": 53,
+    "0x": 2
+   }
+  }
+ },
+ "exchange_labels_found": [],
+ "fees_q3": 1999924.3489305226,
+ "universe_size": 738504,
+ "addresses_nonzero": 160262,
+ "unattributed_q3": 551403.8288842884,
+ "burned_to_start": 30059691.45151627,
+ "expected_supply_start": 9969940308.548483,
+ "coverage_start": 0.9963340653792903,
+ "checks_rows": [
+  [
+   "WRBNT contract RBNT = WRBNT totalSupply (block 3025809)",
+   "<b>PASS</b> \u00b7 <span class=mono>1,819,066,450.664362 = 1,819,066,450.664362</span>"
+  ],
+  [
+   "Sum of WRBNT balances read = totalSupply (block 3025809)",
+   "<b>PASS</b> \u00b7 <span class=mono>1,819,066,450.664362</span>"
+  ],
+  [
+   "Sum of stakers' userInfo = Reddex staking pool (no lock) totalStake() (block 3025809)",
+   "<b>PASS</b> \u00b7 <span class=mono>358,606,856.278497</span>"
+  ],
+  [
+   "Sum of stakers' userInfo = Reddex staking pool (365-day lock) totalStake() (block 3025809)",
+   "<b>PASS</b> \u00b7 <span class=mono>277,156,292.003276</span>"
+  ],
+  [
+   "Holdings counted once: sum of holdings = sum of native RBNT balances (block 3025809)",
+   "<b>PASS</b> \u00b7 <span class=mono>9,933,391,159.204966</span>"
+  ],
+  [
+   "WRBNT contract RBNT = WRBNT totalSupply (block 3209414)",
+   "<b>PASS</b> \u00b7 <span class=mono>1,736,902,022.349253 = 1,736,902,022.349253</span>"
+  ],
+  [
+   "Sum of WRBNT balances read = totalSupply (block 3209414)",
+   "<b>PASS</b> \u00b7 <span class=mono>1,736,902,022.349253</span>"
+  ],
+  [
+   "Sum of stakers' userInfo = Reddex staking pool (no lock) totalStake() (block 3209414)",
+   "<b>PASS</b> \u00b7 <span class=mono>440,677,249.909280</span>"
+  ],
+  [
+   "Sum of stakers' userInfo = Reddex staking pool (365-day lock) totalStake() (block 3209414)",
+   "<b>PASS</b> \u00b7 <span class=mono>310,573,757.560349</span>"
+  ],
+  [
+   "Holdings counted once: sum of holdings = sum of native RBNT balances (block 3209414)",
+   "<b>PASS</b> \u00b7 <span class=mono>9,931,942,638.684919</span>"
+  ],
+  [
+   "Ecosystem (Unlocked): start \u2212 sent \u2212 fees + received = end (RBNT)",
+   "<b>PASS</b> \u00b7 <span class=mono>68,892,664.474407 \u2212 43,796,669.000000 \u2212 15,724.230054 + 0.000000 = 25,080,271.244353</span>"
+  ],
+  [
+   "Fall in RBNT read over the quarter vs base fees burned in the quarter",
+   "<b>INFO</b> \u00b7 <span class=mono>fall 1,448,520.52; fees burned 1,999,924.35; difference 551,403.83 RBNT moved in from addresses this method does not reach</span>"
+  ],
+  [
+   "RBNT read at block 3025809 vs 10,000,000,000 allocated minus all base fees burned since launch",
+   "<b>INFO</b> \u00b7 <span class=mono>read 9,933,391,159.20; expected 9,969,940,308.55 (burned 30,059,691.45); coverage 99.633%</span>"
+  ]
+ ],
+ "text": {
+  "lead": "Over the quarter, RBNT moved from Redbelly's reserved wallets and vesting contracts into unnamed wallets, and more of it went into staking. Unnamed wallets gained 139.1 million RBNT in total, and RBNT staked in the two Reddex pools rose by 18.2% to 751.3 million. Holdings stayed highly concentrated: the 10 largest unnamed holders held 49.3% of all RBNT in unnamed wallets on 30 September.",
+  "points": [
+   "<b>Staking grew.</b> 751.3 million RBNT was staked on 30 September, against 635.8 million on 1 July. The no-lock pool took most of the increase (+82.1 million). 1,255 wallets had a stake at the end of the quarter, against 1,268 at the start, so the growth came from larger stakes rather than more stakers.",
+   "<b>The largest holders mostly held or added.</b> Of the 100 largest unnamed wallets on 1 July, 43 grew, 49 stayed about the same and 8 shrank. Together their holdings rose by 45.3 million RBNT (3.3%).",
+   "<b>Concentration edged up.</b> The top 10 unnamed holders' share went from 48.4% to 49.3%, and the top 100 from 76.6% to 77.4%.",
+   "<b>One day of reserved-wallet moves.</b> On 10 September, 500 million RBNT moved from Ecosystem (Locked) to Ecosystem 2 (Unlocked), 253.1 million from Ecosystem 2 (Unlocked) to Investors, and 33.3 million from Governance (Locked) to Governance (Unlocked). All of these stayed inside the reserved wallets.",
+   "<b>RBNT left the reserved wallets through one wallet.</b> Ecosystem (Unlocked), the only reserved wallet that sends its own transactions, sent out 43.8 million RBNT net, including 15 million to fund staking rewards.",
+   "<b>Vesting contracts released 73.9 million RBNT</b> over the quarter (counting WRBNT as RBNT), and the RBNT locked in the bridge to other chains rose to 43.2 million."
+  ],
+  "c1": "Reserved wallets held 59.7% of all RBNT on 30 September. Unnamed wallets held 19.4%, up from 17.9%. Staked RBNT is counted with the wallet that staked it.",
+  "s1_plain": "Most RBNT is still in wallets Redbelly reserved at launch (team, investors, ecosystem, reserve and others), and in contracts that release tokens over time. During the quarter, about 118 million RBNT flowed out of those two groups, and unnamed wallets ended up with 139 million more. The total went down slightly (1.45 million) because transaction fees on Redbelly are paid to a zero address and so leave circulation. Base fees in the quarter came to 2.00 million RBNT.",
+  "c2": "The 10 largest unnamed wallets held 49.3% of all unnamed-wallet RBNT on 30 September, and the 100 largest held 77.4%.",
+  "c3": "Most wallets are small. Wallets holding 10 RBNT or less are not shown (see method).",
+  "s2_plain": "RBNT in unnamed wallets is held very unevenly: a few large wallets hold most of it, and thousands of wallets hold small amounts. The half-way wallet (the median) held about 66 RBNT. The Gini score of 0.98 is close to 1, which means very uneven. That is common for tokens where exchanges, funds and early participants keep large balances in single wallets. Over the quarter the picture barely changed. The number of wallets with 10 to 10,000 RBNT rose from 12,318 to 12,430.",
+  "c4": "In every group, more wallets grew than shrank. Most wallets ranked 101 to 1,000 kept roughly the same holdings.",
+  "c5": "Change in total holdings of each group of wallets ranked on 1 July. Bars to the right are net increases.",
+  "s3_plain": "The 100 largest unnamed wallets on 1 July held 1,365.2 million RBNT, and by 30 September the same wallets held 1,410.4 million. Much of that is staked: 498.0 million at the start and 550.8 million at the end. 91 of the 100 were still in the top 100 at the end of the quarter, and 9 wallets joined it. Wallets that shrank were a minority in every group. Some wallets gaining is consistent with tokens arriving from vesting contracts and from the reserved wallets. The data cannot say why any wallet grew or shrank.",
+  "c6": "Stakes in the no-lock pool rose by 22.9%, and in the 365-day pool by 12.1%.",
+  "s4_plain": "More RBNT went into staking than came out. Across both pools 196.4 million RBNT was staked during the quarter and 80.9 million was withdrawn. The 365-day pool opened on 31 May 2025, so deposits from its first months reached the end of their one-year lock in mid-2026. That is why some RBNT left it this quarter. Rewards are paid from RBNT added to the pools. Ecosystem (Unlocked) added 15 million RBNT in the quarter, and about 14.8 million was paid out to stakers. By 30 September, 7.6% of all RBNT was staked.",
+  "c7": "Bars to the right are increases. Four wallets did not move at all.",
+  "s5_moves": "<p>Six of the nine reserved wallets are multisig wallets that moved only on <b>10 September 2026</b>, in three transfers between reserved wallets within three minutes (blocks <span class=mono>3175499</span>, <span class=mono>3175501</span> and <span class=mono>3175505</span>):</p><ul><li>Ecosystem 2 (Unlocked) \u2192 Investors: 253,115,670 RBNT</li><li>Ecosystem (Locked) \u2192 Ecosystem 2 (Unlocked): 500,000,000 RBNT</li><li>Governance (Locked) \u2192 Governance (Unlocked): 33,333,333 RBNT</li></ul><p>None of these RBNT left the reserved wallets during the quarter. TEAM (Locked), Reserve and USYD/CSIRO (Locked) did not change at all, and the Investors wallet did not send anything on before 30 September.</p><p><b>Ecosystem (Unlocked)</b> is the one reserved wallet that sends its own transactions (118 in the quarter). Its holdings fell by 43,820,074 RBNT. Where the RBNT went:</p><ul><li>25,100,000 RBNT wrapped into WRBNT, and 34,720,848 WRBNT then sent to 2 smart contracts</li><li>15,000,000 RBNT to the two Reddex pools as reward funds</li><li>3,496,669 RBNT to 13 unnamed wallets in 22 transactions</li><li>200,000 RBNT to other smart contracts</li><li>15,724 RBNT in transaction fees</li></ul><p>It also received 9,613,167 WRBNT from a token vesting contract.</p>",
+  "s5_bridge": "The RBNT Native OFT Adapter is the contract that locks RBNT on Redbelly when it is bridged to another chain. It held 38.3 million RBNT on 1 July and 43.2 million on 30 September, a net increase of 4.9 million. So slightly more RBNT moved out to other chains than came back. RBNT on other chains is outside the scope of this report.",
+  "s5_exchanges": "When the data was collected (26 October 2026), Routescan showed no public exchange labels for any Redbelly address. Exchange wallets therefore cannot be told apart from other wallets in this edition, and any exchange balances are inside the \"unnamed wallets\" group. If Routescan adds exchange labels, the next edition will report their flows separately.",
+  "s5_plain": "This quarter, the big reserved-wallet moves were transfers between Redbelly's own wallets on one day. The RBNT that actually left the reserved wallets came from Ecosystem (Unlocked), which pays staking rewards and makes other ecosystem payments.",
+  "method_html": "<p><b>Snapshots.</b> Balances were read directly from the Redbelly chain at block <span class=mono>3025809</span> (the last block before 1 July 2026, 30 Jun 23:57:19 UTC) and block <span class=mono>3209414</span> (the last block of the quarter, 30 Sep 23:57:35 UTC). The treasury page lists original allocations, so it was used only for wallet names and addresses.</p><p><b>Which wallets.</b> Every address that appeared in any transaction from the start of the chain up to 26 October 2026 was checked, along with the WRBNT holder list from Routescan. That is 738,504 addresses, of which 160,262 held RBNT at one of the two blocks.</p><p><b>Counting once.</b> A wallet's holdings = its plain RBNT + its WRBNT + the RBNT it has staked in either Reddex pool. The RBNT inside the WRBNT contract is not counted again, because it is the backing of everyone's WRBNT. A pool's RBNT beyond its <span class=mono>totalStake()</span> is shown as reward funds. Pool balances therefore include reward funds as well as stakes.</p><p><b>Groups.</b> Only publicly named wallets are named. Contracts are grouped by matching their code to verified contracts on Routescan (<span class=mono>TokenVestingManager</span>, <span class=mono>RBNTNativeOFTAdapter</span>). Every other wallet is reported only in groups. A holder is an unnamed wallet with more than 10 RBNT.</p><p><b>Checks.</b> The appendix lists the reconciliation checks. WRBNT held = WRBNT supply = RBNT in the WRBNT contract, and the sum of stakers' balances = each pool's <span class=mono>totalStake()</span>. Both match to the wei at both blocks. The RBNT read at the start block is 99.63% of what should exist (10,000M allocated minus 30.1 million burned as fees since launch). Over the quarter, the total read fell by 1.45 million while 2.00 million was burned as fees. The 0.55 million difference is RBNT that moved in from addresses this method does not reach, such as contracts only ever called by other contracts. It is too small to change any finding.</p><p>The full method, scripts and data are in the repository (<span class=mono>METHOD.md</span>, <span class=mono>scripts/</span>, <span class=mono>data/</span>). Running the same scripts with new snapshot blocks produces the next edition.</p>",
+  "sources_rows": [
+   [
+    "RBNT staked, 30 Sep",
+    "751.3M",
+    "<span class=mono>totalStake()</span> on both pools at block 3209414",
+    "staking_pools.csv"
+   ],
+   [
+    "RBNT staked, 1 Jul",
+    "635.8M",
+    "<span class=mono>totalStake()</span> on both pools at block 3025809",
+    "staking_pools.csv"
+   ],
+   [
+    "Pool balances",
+    "443.2M / 311.5M",
+    "<span class=mono>eth_getBalance</span> on pool addresses, block 3209414",
+    "staking_pools.csv"
+   ],
+   [
+    "Gross staked / unstaked",
+    "196.4M / 80.9M",
+    "Every successful <span class=mono>stake()</span> transaction in blocks 3025810\u20133209414; change in <span class=mono>totalStake()</span>",
+    "staking_pools.csv"
+   ],
+   [
+    "Unnamed-wallet holdings",
+    "1,783.0M \u2192 1,922.1M",
+    "RBNT + WRBNT + staked, summed over unnamed wallets, both blocks",
+    "supply_by_category.csv"
+   ],
+   [
+    "Top-10 share",
+    "48.4% \u2192 49.3%",
+    "Ranked unnamed holders (more than 10 RBNT), both blocks",
+    "concentration.csv"
+   ],
+   [
+    "Holders above 10 RBNT",
+    "14,441 \u2192 14,552",
+    "Count of unnamed wallets with holdings above 10 RBNT",
+    "concentration.csv"
+   ],
+   [
+    "Top-100 behaviour",
+    "43 grew / 49 same / 8 shrank",
+    "Unnamed wallets ranked on 1 Jul, compared on 30 Sep (\u00b11%)",
+    "largest_holder_tiers.csv"
+   ],
+   [
+    "Reserved-wallet balances",
+    "see Section 5",
+    "<span class=mono>eth_getBalance</span> + WRBNT <span class=mono>balanceOf</span>, both blocks; change blocks by binary search",
+    "reserved_wallets.csv"
+   ],
+   [
+    "Ecosystem (Unlocked) outflows",
+    "43.8M",
+    "All 118 transactions it sent in the quarter, with their receipts",
+    "eco_unlocked_flows.csv"
+   ],
+   [
+    "Bridge adapter balance",
+    "38.3M \u2192 43.2M",
+    "<span class=mono>eth_getBalance</span> on the verified RBNTNativeOFTAdapter, both blocks",
+    "supply_by_category.csv"
+   ],
+   [
+    "Base fees in the quarter",
+    "2.00M",
+    "\u03a3 gasUsed \u00d7 baseFeePerGas over blocks 3025810\u20133209414",
+    "checks.csv"
+   ]
+  ],
+  "checks_rows": [
+   [
+    "WRBNT contract RBNT = WRBNT totalSupply (block 3025809)",
+    "<b>PASS</b> \u00b7 <span class=mono>1,819,066,450.664362 = 1,819,066,450.664362</span>"
+   ],
+   [
+    "Sum of WRBNT balances read = totalSupply (block 3025809)",
+    "<b>PASS</b> \u00b7 <span class=mono>1,819,066,450.664362</span>"
+   ],
+   [
+    "Sum of stakers' userInfo = Reddex staking pool (no lock) totalStake() (block 3025809)",
+    "<b>PASS</b> \u00b7 <span class=mono>358,606,856.278497</span>"
+   ],
+   [
+    "Sum of stakers' userInfo = Reddex staking pool (365-day lock) totalStake() (block 3025809)",
+    "<b>PASS</b> \u00b7 <span class=mono>277,156,292.003276</span>"
+   ],
+   [
+    "Holdings counted once: sum of holdings = sum of native RBNT balances (block 3025809)",
+    "<b>PASS</b> \u00b7 <span class=mono>9,933,391,159.204966</span>"
+   ],
+   [
+    "WRBNT contract RBNT = WRBNT totalSupply (block 3209414)",
+    "<b>PASS</b> \u00b7 <span class=mono>1,736,902,022.349253 = 1,736,902,022.349253</span>"
+   ],
+   [
+    "Sum of WRBNT balances read = totalSupply (block 3209414)",
+    "<b>PASS</b> \u00b7 <span class=mono>1,736,902,022.349253</span>"
+   ],
+   [
+    "Sum of stakers' userInfo = Reddex staking pool (no lock) totalStake() (block 3209414)",
+    "<b>PASS</b> \u00b7 <span class=mono>440,677,249.909280</span>"
+   ],
+   [
+    "Sum of stakers' userInfo = Reddex staking pool (365-day lock) totalStake() (block 3209414)",
+    "<b>PASS</b> \u00b7 <span class=mono>310,573,757.560349</span>"
+   ],
+   [
+    "Holdings counted once: sum of holdings = sum of native RBNT balances (block 3209414)",
+    "<b>PASS</b> \u00b7 <span class=mono>9,931,942,638.684919</span>"
+   ],
+   [
+    "Ecosystem (Unlocked): start \u2212 sent \u2212 fees + received = end (RBNT)",
+    "<b>PASS</b> \u00b7 <span class=mono>68,892,664.474407 \u2212 43,796,669.000000 \u2212 15,724.230054 + 0.000000 = 25,080,271.244353</span>"
+   ],
+   [
+    "Fall in RBNT read over the quarter vs base fees burned in the quarter",
+    "<b>INFO</b> \u00b7 <span class=mono>fall 1,448,520.52; fees burned 1,999,924.35; difference 551,403.83 RBNT moved in from addresses this method does not reach</span>"
+   ],
+   [
+    "RBNT read at block 3025809 vs 10,000,000,000 allocated minus all base fees burned since launch",
+    "<b>INFO</b> \u00b7 <span class=mono>read 9,933,391,159.20; expected 9,969,940,308.55 (burned 30,059,691.45); coverage 99.633%</span>"
+   ]
+  ]
+ }
+}

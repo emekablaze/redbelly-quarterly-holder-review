@@ -1,0 +1,8 @@
+direction,asset,group,amount,txs,addresses
+out,RBNT,Wrapped into WRBNT,25100000.0,2,1
+out,RBNT,Reddex staking pools (reward funds),15000000.0,5,2
+out,RBNT,Unnamed wallets,3496669.0,22,13
+out,RBNT,Other smart contracts,200000.0,2,1
+out,WRBNT,Other smart contracts,34720848.0,,2
+in,WRBNT,Token vesting contracts,9613167.21817,,1
+out,RBNT,Transaction fees,15724.230054,118,

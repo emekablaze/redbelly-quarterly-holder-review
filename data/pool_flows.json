@@ -1,0 +1,40 @@
+{
+ "nolock": {
+  "stake_txs": 262,
+  "stakers_who_staked": 119,
+  "staked_gross": 132965676.60653311,
+  "unstaked_gross": 50895282.97574991,
+  "unstake_txs": 104,
+  "claim_txs": 183,
+  "reward_funding": 5000000.0,
+  "reward_funding_from_reserved": 5000000.0,
+  "reward_funding_txs": 3,
+  "rewards_paid_est": 4436786.6816150835,
+  "failed_txs": 3,
+  "selectors": {
+   "0xb88a802f": 183,
+   "0x3a4b66f1": 262,
+   "0xc2a672e0": 104,
+   "0x": 3
+  }
+ },
+ "lock365": {
+  "stake_txs": 227,
+  "stakers_who_staked": 69,
+  "staked_gross": 63401240.22230019,
+  "unstaked_gross": 29983774.665226802,
+  "unstake_txs": 53,
+  "claim_txs": 263,
+  "reward_funding": 10000000.0,
+  "reward_funding_from_reserved": 10000000.0,
+  "reward_funding_txs": 2,
+  "rewards_paid_est": 10336843.241056256,
+  "failed_txs": 2,
+  "selectors": {
+   "0xb88a802f": 263,
+   "0x3a4b66f1": 227,
+   "0xc2a672e0": 53,
+   "0x": 2
+  }
+ }
+}
