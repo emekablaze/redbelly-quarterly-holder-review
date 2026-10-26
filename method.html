@@ -1,0 +1,366 @@
+<!doctype html><html lang="en" data-theme="dark"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Method and data · RBNT Holder Report Q3 2026</title>
+<meta name="description" content="How the RBNT holder report was produced: snapshot blocks, sources, rules, checks and the data dictionary.">
+<meta name="theme-color" content="#0c1317">
+<link rel="canonical" href="https://redbelly-quarterly-holder-review.vercel.app/method.html">
+<meta property="og:type" content="article"><meta property="og:title" content="Method and data · RBNT Holder Report Q3 2026"><meta property="og:description" content="How the RBNT holder report was produced: snapshot blocks, sources, rules, checks and the data dictionary.">
+<meta property="og:url" content="https://redbelly-quarterly-holder-review.vercel.app/method.html"><meta property="og:image" content="https://redbelly-quarterly-holder-review.vercel.app/assets/img/og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Method and data · RBNT Holder Report Q3 2026"><meta name="twitter:description" content="How the RBNT holder report was produced: snapshot blocks, sources, rules, checks and the data dictionary."><meta name="twitter:image" content="https://redbelly-quarterly-holder-review.vercel.app/assets/img/og.png">
+<link rel="icon" href="assets/img/favicon.ico" sizes="any"><link rel="icon" type="image/png" href="assets/img/favicon-32.png"><link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/BeVietnamPro-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/BeVietnamPro-700-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/fonts.css"><link rel="stylesheet" href="assets/css/site.css">
+<script>(function(){try{var t=localStorage.getItem("rbnt-theme");if(!t)t=matchMedia("(prefers-color-scheme: light)").matches?"light":"dark";document.documentElement.dataset.theme=t;}catch(e){}})();</script>
+</head><body><a class="skip" href="#content">Skip to the report</a>
+<header class="site-header"><div class="shell">
+<a class="brand" href="index.html" aria-label="RBNT Holder Report, home"><img class="logo-dark" src="assets/img/dao-logo-on-dark.png" alt="Redbelly DAO" width="50" height="36"><img class="logo-light" src="assets/img/dao-logo-on-light.png" alt="Redbelly DAO" width="50" height="36">
+<span class="brand-text"><b>Holder Report</b><span>Q3 2026 · Edition 01</span></span></a>
+<nav class="top-nav" aria-label="Sections"><a href="index.html#supply">Where RBNT sits</a><a href="index.html#concentration">Concentration</a><a href="index.html#largest">Largest holders</a><a href="index.html#staking">Staking</a><a href="index.html#named">Named wallets</a><a href="index.html#method">Method &amp; checks</a></nav>
+<div class="header-actions">
+<button class="btn icon-btn theme-btn" type="button" aria-label="Switch light or dark theme"><svg class="ic16 i-moon" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13.5 9.5A5.5 5.5 0 016.5 2.5a5.5 5.5 0 107 7z"/></svg><svg class="ic16 i-sun" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="3"/><path d="M8 1v1.5M8 13.5V15M1 8h1.5M13.5 8H15M3 3l1 1M12 12l1 1M13 3l-1 1M4 12l-1 1"/></svg></button>
+<a class="btn btn-primary hide-sm" href="report/RBNT-Holder-Report-Q3-2026.pdf" download><svg class="ic16 " width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v9M4 7l4 4 4-4M3 14h10"/></svg>PDF</a>
+<button class="btn icon-btn menu-btn" type="button" aria-label="Open the section list" aria-expanded="false"><svg class="ic16 " width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 4h12M2 8h12M2 12h12"/></svg></button>
+</div></div><div class="progress" aria-hidden="true"></div></header>
+<div class="sheet" aria-label="Sections"><div class="scrim"></div><nav><div style="display:flex;justify-content:space-between;align-items:center"><span class="caps" style="color:var(--muted)">Sections</span><button class="btn icon-btn close" type="button" aria-label="Close"><svg class="ic16 " width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13"/></svg></button></div>
+<ol><li><a href="index.html#summary"><span>00</span>Summary</a></li><li><a href="index.html#supply"><span>01</span>Where RBNT sits</a></li><li><a href="index.html#concentration"><span>02</span>Concentration</a></li><li><a href="index.html#largest"><span>03</span>Largest holders</a></li><li><a href="index.html#staking"><span>04</span>Staking</a></li><li><a href="index.html#named"><span>05</span>Named wallets</a></li><li><a href="index.html#method"><span>06</span>Method &amp; checks</a></li><li><a href="index.html#downloads"><span>07</span>Data &amp; sharing</a></li></ol>
+<a class="btn btn-primary" href="report/RBNT-Holder-Report-Q3-2026.pdf" download style="width:100%;justify-content:center"><svg class="ic16 " width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v9M4 7l4 4 4-4M3 14h10"/></svg>Download the PDF</a></nav></div><div class="shell" style="padding-top:48px;padding-bottom:80px"><main id="content" class="prose doc" style="max-width:860px"><span id="top"></span>
+<p><a href="index.html">← Back to the report</a></p><h1 id="method-and-sources-rbnt-holder-report">Method and sources: RBNT Holder Report</h1>
+<p>This note explains how the Q3 2026 edition was produced, so that anyone can check a figure and the next edition can be produced the same way. Everything here runs from the scripts in <a href="scripts/README.md"><code>scripts/</code></a>. Their outputs are in <a href="data/README.md"><code>data/</code></a>.</p>
+<h2 id="1-period-and-snapshot-blocks">1. Period and snapshot blocks</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Quarter</td>
+<td>1 July 2026 00:00 UTC to 30 September 2026 23:59:59 UTC</td>
+</tr>
+<tr>
+<td>Start snapshot</td>
+<td>Block <strong>3,025,809</strong> (timestamp 1782863839, 30 Jun 2026 23:57:19 UTC), the last block before the quarter</td>
+</tr>
+<tr>
+<td>End snapshot</td>
+<td>Block <strong>3,209,414</strong> (timestamp 1790812655, 30 Sep 2026 23:57:35 UTC), the last block of the quarter</td>
+</tr>
+<tr>
+<td>Transactions in the quarter</td>
+<td>Blocks 3,025,810 to 3,209,414 inclusive</td>
+</tr>
+<tr>
+<td>Daily series</td>
+<td>The last block before each midnight UTC, 1 Jul to 1 Oct 2026 (93 points)</td>
+</tr>
+</tbody>
+</table>
+<p>The snapshot blocks come from the explorer API (<code>module=block&amp;action=getblocknobytime&amp;closest=before</code>) for 1782864000 (1 Jul 2026 00:00 UTC) and 1790812800 (1 Oct 2026 00:00 UTC), and were checked against block timestamps on the RPC. Redbelly only makes a block when there is a transaction, so a snapshot can fall a few minutes before midnight.</p>
+<h2 id="2-sources">2. Sources</h2>
+<table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Used for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Redbelly mainnet RPC <code>https://governors.mainnet.redbelly.network</code> (chain ID 151)</td>
+<td>Every balance at the snapshot blocks (<code>eth_getBalance</code>, <code>eth_call</code>), every block and transaction (<code>eth_getBlockByNumber</code>), receipts, contract code</td>
+</tr>
+<tr>
+<td>Routescan API <code>https://api.routescan.io/v2/network/mainnet/evm/151/...</code></td>
+<td>WRBNT holder list, verified contract names and source code, snapshot block numbers, and a cross-check of the address list (section 4)</td>
+</tr>
+<tr>
+<td>DAO treasury page <code>https://redbellydao.network/treasury/</code></td>
+<td>Names and addresses of the nine reserved wallets, read from the table embedded in the page's JavaScript bundle</td>
+</tr>
+<tr>
+<td>Verified source code on Routescan</td>
+<td>How the Reddex pools work (<code>ReddexRBNTLockStaker</code>), plus the WRBNT, bridge and vesting contracts</td>
+</tr>
+</tbody>
+</table>
+<p>The treasury page shows <strong>original allocations</strong>. Every reserved-wallet figure in the report is a balance read from the chain at a snapshot block.</p>
+<h2 id="3-which-addresses-were-read">3. Which addresses were read</h2>
+<p>No RPC call returns "every holder at block N", so the address list was built from the chain itself:</p>
+<ol>
+<li><strong>Every block from the first to block 3,238,634</strong> (26 Oct 2026) was read. For each transaction, the scan collected the sender, the recipient, and every address named in the transaction data: ABI-encoded address arguments, addresses passed as <code>bytes</code> or as text (as bridges do), and recipients inside multisig batch payouts (<code>scripts/scan_addrs.py</code>). This catches accounts that receive RBNT without ever sending a transaction. One example is the small RBNT credit that Redbelly's account-permission registry gives most newly permissioned accounts (in a random sample of 40 registrations: 10 RBNT for 19, 5 RBNT for 16, 125 RBNT for 2 and nothing for 3). The account is named in the registry call.</li>
+<li><strong>Routescan's WRBNT holder list.</strong></li>
+<li><strong>The named addresses</strong>: the nine reserved wallets, the two staking pools, the WRBNT contract and the bridge adapter.</li>
+</ol>
+<p>That gives <strong>810,661 addresses</strong>. <strong>165,294</strong> of them held RBNT, WRBNT or a stake at one of the two snapshot blocks.</p>
+<h2 id="4-how-complete-the-list-is">4. How complete the list is</h2>
+<table>
+<thead>
+<tr>
+<th>Check</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>All RBNT at genesis</td>
+<td>All 10,000,000,000 RBNT sat in a single address at block 0, and that address is in the list</td>
+</tr>
+<tr>
+<td>WRBNT</td>
+<td>The WRBNT balances read add up exactly to WRBNT <code>totalSupply()</code> at both blocks, so every WRBNT holder is included</td>
+</tr>
+<tr>
+<td>Staking</td>
+<td>Stakers' <code>userInfo</code> amounts add up exactly to each pool's <code>totalStake()</code> at both blocks, so every staker is included</td>
+</tr>
+<tr>
+<td>Cross-check with Routescan's sorted address list</td>
+<td>300 addresses sampled from it (ranks 1–200 and 501–600): 298 are in the list. The other 2 held <strong>0 RBNT at the end block</strong>: one was first funded in October, and the other is listed by Routescan with a balance of about 175,000 RBNT while both the chain and Routescan's own address page show 0</td>
+</tr>
+</tbody>
+</table>
+<p>The last check matters for anyone repeating this work. <strong>Routescan's sorted address list carries stale balances for some addresses</strong>, so the number of addresses it lists above a threshold is not a reliable holder count. Read balances from the chain instead.</p>
+<h2 id="5-counting-each-token-once">5. Counting each token once</h2>
+<table>
+<thead>
+<tr>
+<th>Where the RBNT sits</th>
+<th>How it is counted</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>In a wallet as plain RBNT</td>
+<td>For that wallet</td>
+</tr>
+<tr>
+<td>Wrapped as WRBNT</td>
+<td>For the wallet holding the WRBNT. The RBNT inside the WRBNT contract is <strong>not counted again</strong>. Check: the contract's RBNT equals WRBNT <code>totalSupply()</code> to the wei</td>
+</tr>
+<tr>
+<td>Staked in a Reddex pool</td>
+<td>For the staker (<code>userInfo(address).amount</code>). Whatever a pool holds beyond <code>totalStake()</code> is shown as that pool's <strong>reward funds</strong></td>
+</tr>
+</tbody>
+</table>
+<p>"Holdings" = plain RBNT + WRBNT + RBNT staked in either pool.</p>
+<p><strong>Pool balances include reward funds as well as stakes.</strong> Rewards are paid in RBNT from each pool's own balance, so a pool's RBNT balance is user stakes plus RBNT added to pay rewards. The report shows the pool balance, the <code>totalStake()</code> figure and the gap between them.</p>
+<h2 id="6-groups">6. Groups</h2>
+<table>
+<thead>
+<tr>
+<th>Group</th>
+<th>Rule</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Redbelly reserved wallets</td>
+<td>The nine addresses on the DAO treasury page</td>
+</tr>
+<tr>
+<td>Reddex pools: reward funds</td>
+<td>The two pools named in the brief. Only their reward funds sit here, because stakes are counted with the stakers</td>
+</tr>
+<tr>
+<td>Bridge to other chains</td>
+<td>The verified <code>RBNTNativeOFTAdapter</code>. RBNT locked here backs RBNT bridged to other chains</td>
+</tr>
+<tr>
+<td>Token vesting contracts</td>
+<td>Contracts whose code is byte-identical to the verified <code>TokenVestingManager</code> (same code hash)</td>
+</tr>
+<tr>
+<td>Other smart contracts</td>
+<td>Any other address with code, such as exchange pools and routers. Reported only as a group</td>
+</tr>
+<tr>
+<td>Labelled exchange wallets</td>
+<td>Addresses that Routescan publicly names as an exchange. <strong>None were labelled when the data was collected</strong>, so this group is empty in this edition</td>
+</tr>
+<tr>
+<td>Unnamed wallets</td>
+<td>Every other address: ordinary wallets and unnamed multisig wallets. Reported <strong>only in groups</strong>, and never listed by address in any file</td>
+</tr>
+</tbody>
+</table>
+<h2 id="7-measures">7. Measures</h2>
+<ul>
+<li><strong>Holder</strong>: an unnamed wallet holding more than 10 RBNT. Wallets with 10 RBNT or less (mostly leftovers after fees) are left out of holder counts and concentration figures, but included in every supply total.</li>
+<li><strong>Top 10 / 50 / 100 / 500 share</strong>: the share of unnamed-holder RBNT held by the largest 10, 50, 100 or 500 of them.</li>
+<li><strong>Gini coefficient</strong>: from 0 (all hold the same) to 1 (one wallet holds everything).</li>
+<li><strong>Largest-holder groups</strong>: unnamed wallets ranked by holdings at the <strong>start</strong>. The groups stay fixed, so the end figures show what the same wallets did. Grew = more than +1%, shrank = more than −1%, otherwise about the same. Emptied = below 1 RBNT at the end.</li>
+<li><strong>Staking flows</strong>: staked in = the value of every successful <code>stake()</code> transaction to a pool (489 in the quarter). Withdrawn = staked in minus the change in <code>totalStake()</code>. Reward funds added = plain RBNT transfers to a pool. Rewards paid = reward funds added minus the change in reward funds.</li>
+<li><strong>Reserved-wallet movements</strong>: eight of the nine reserved wallets are multisig contracts, so their transfers show up as balance changes, not as transactions they send. Every block where one of them changed balance was found by binary search on its balance (<code>scripts/changepoints.py</code>).</li>
+</ul>
+<h2 id="8-checks">8. Checks</h2>
+<p>All results are in <a href="data/checks.csv"><code>data/checks.csv</code></a>. PASS rows match to the wei. INFO rows are reconciliation notes.</p>
+<table>
+<thead>
+<tr>
+<th>Check</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>WRBNT contract RBNT = WRBNT <code>totalSupply()</code>, both blocks</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>Sum of WRBNT balances read = WRBNT <code>totalSupply()</code>, both blocks</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>Sum of stakers' <code>userInfo</code> = each pool's <code>totalStake()</code>, both blocks, both pools</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>Sum of holdings = sum of plain RBNT balances read (nothing counted twice), both blocks</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>Ecosystem (Unlocked): start − sent − fees + received = end</td>
+<td>PASS, with fees from transaction receipts</td>
+</tr>
+<tr>
+<td>All RBNT at genesis is held by an address in the list</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>Fees vs change in total</td>
+<td>INFO: transaction fees paid in the quarter were 2.00M RBNT, and the total RBNT read fell by 1.20M. The 0.80M difference was paid back out to addresses as credits that are not transactions. For example, a group of 32 addresses received daily credits of 50 to 120 RBNT each, which track network activity</td>
+</tr>
+</tbody>
+</table>
+<h2 id="9-producing-the-next-edition">9. Producing the next edition</h2>
+<ol>
+<li>Set the new snapshot blocks (<code>S</code>, <code>E</code>) in the scripts with <code>getblocknobytime</code> (<code>closest=before</code>) for the first second of the quarter and of the next quarter.</li>
+<li>Re-read the treasury page for new or changed reserved wallets (<code>scripts/get_treasury.py</code>).</li>
+<li>Extend the block scans to the new end block. The scans are resumable, so earlier chunks are reused (<code>scripts/scan_chunks.py</code>, <code>scripts/scan_addrs.py</code>).</li>
+<li>Check Routescan for newly labelled exchange wallets.</li>
+<li>Run the scripts in the order in <a href="scripts/README.md"><code>scripts/README.md</code></a>, then confirm every PASS row in <code>checks.csv</code> before publishing.</li>
+</ol>
+<p>The RPC limits <code>eth_getLogs</code> to 100 blocks per call and rate-limits it, so the method reads blocks and contract state instead of event logs. Without a key, the Routescan API rate-limits heavy use; a free key (https://rscan.link/api) avoids that.</p>
+<h2 id="10-limits">10. Limits</h2>
+<ul>
+<li>Wallets are not people: one person can hold many wallets, and an exchange wallet holds tokens for many people.</li>
+<li>RBNT on other chains is out of scope. Only the RBNT locked in the bridge adapter on Redbelly is shown.</li>
+<li>RBNT inside exchange pools, routers and other unnamed contracts is reported as one group and not looked through.</li>
+<li>The day-by-day series are read at the end of each UTC day. Movements inside a day net out.</li>
+</ul><hr style="border:0;border-top:1px solid var(--edge);margin:48px 0"><h1>Data dictionary: Q3 2026 edition</h1>
+<p>Snapshot blocks: start <code>3025809</code> (30 Jun 2026 23:57:19 UTC), end <code>3209414</code> (30 Sep 2026 23:57:35 UTC). All amounts are in RBNT (WRBNT counted 1:1, 18 decimals already applied) unless a column says wei. "Holdings" = plain RBNT + WRBNT + RBNT staked in a Reddex pool. See <a href="#top"><code>../METHOD.md</code></a> for the full method.</p>
+<p><strong>No file contains the address of an unnamed wallet.</strong> The only addresses are those already public: the reserved wallets, the WRBNT contract, the two Reddex pools and the bridge adapter.</p>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Used in</th>
+<th>Contents</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>supply_by_category.csv</code></td>
+<td>Section 01</td>
+<td>Holdings by group at both blocks, the change, and the number of addresses with a balance</td>
+</tr>
+<tr>
+<td><code>concentration.csv</code></td>
+<td>Section 02</td>
+<td>Holders above 10 RBNT, top 10/50/100/500 shares, Gini coefficient and median, at both blocks</td>
+</tr>
+<tr>
+<td><code>holder_size_bands.csv</code></td>
+<td>Section 02</td>
+<td>Unnamed wallets above 10 RBNT by holding size: how many, and how much RBNT</td>
+</tr>
+<tr>
+<td><code>largest_holder_tiers.csv</code></td>
+<td>Section 03</td>
+<td>Unnamed wallets ranked on 1 Jul: totals at both blocks, change, and counts that grew / stayed the same / shrank / emptied, plus staked amounts</td>
+</tr>
+<tr>
+<td><code>holders_ranked_anonymous.csv</code></td>
+<td>Section 03</td>
+<td>The 1,000 largest unnamed wallets on 1 Jul <strong>by rank only</strong> (no addresses): holdings and stakes at both blocks</td>
+</tr>
+<tr>
+<td><code>staking_pools.csv</code></td>
+<td>Section 04</td>
+<td>Each pool's RBNT balance, <code>totalStake()</code>, reward funds, stakers, gross staked and withdrawn, transactions, reward funds added and rewards paid</td>
+</tr>
+<tr>
+<td><code>daily_series.csv</code></td>
+<td>Sections 04–05</td>
+<td>End-of-day values for every day of the quarter: stakes and balances of both pools, WRBNT supply, bridge adapter, vesting contracts, reserved wallets</td>
+</tr>
+<tr>
+<td><code>reserved_wallets.csv</code></td>
+<td>Section 05</td>
+<td>Each reserved wallet at both blocks (RBNT + WRBNT), and every block where it changed</td>
+</tr>
+<tr>
+<td><code>eco_unlocked_flows.csv</code></td>
+<td>Section 05</td>
+<td>Ecosystem (Unlocked)'s outflows and inflows in the quarter, by destination group</td>
+</tr>
+<tr>
+<td><code>named_balances.json</code></td>
+<td>Verify buttons</td>
+<td>Exact wei balances of the named addresses at both blocks, plus pool and WRBNT totals</td>
+</tr>
+<tr>
+<td><code>checks.csv</code></td>
+<td>Section 06</td>
+<td>Reconciliation checks (PASS / INFO)</td>
+</tr>
+<tr>
+<td><code>figures.json</code></td>
+<td>Whole report</td>
+<td>Every figure the report quotes, and the generated text</td>
+</tr>
+<tr>
+<td><code>treasury_table.json</code></td>
+<td>Section 05</td>
+<td>Reserved wallets as embedded in the DAO treasury page (original allocations, not balances)</td>
+</tr>
+<tr>
+<td><code>pools.json</code></td>
+<td>Section 04</td>
+<td>Raw pool balances, <code>totalStake()</code>, WRBNT <code>totalSupply()</code> and backing, in wei</td>
+</tr>
+<tr>
+<td><code>pool_flows.json</code></td>
+<td>Section 04</td>
+<td>Raw gross staking flows</td>
+</tr>
+<tr>
+<td><code>changes_locked.json</code></td>
+<td>Section 05</td>
+<td>Blocks where each reserved multisig changed balance, with the change in wei</td>
+</tr>
+<tr>
+<td><code>fees_q3.json</code></td>
+<td>Section 06</td>
+<td>Transaction fees paid in the quarter (gas used × base fee, summed over every block)</td>
+</tr>
+</tbody>
+</table></main></div><footer class="site-footer"><div class="shell">
+<div><img class="logo-dark" src="assets/img/dao-logo-on-dark.png" alt="Redbelly DAO" width="62" height="44"><img class="logo-light" src="assets/img/dao-logo-on-light.png" alt="Redbelly DAO" width="62" height="44">
+<p style="max-width:44ch;margin:0">A quarterly, sourced report on RBNT holder trends for the Redbelly DAO community. Facts from the chain only: no price views, no advice, no unnamed wallet singled out.</p></div>
+<div><h4>Report</h4><ul><li><a href="index.html#summary">Summary</a></li><li><a href="index.html#staking">Staking</a></li><li><a href="index.html#named">Named wallets</a></li><li><a href="method.html">Method & data</a></li><li><a href="report/RBNT-Holder-Report-Q3-2026.pdf" download>PDF</a></li></ul></div>
+<div><h4>Sources</h4><ul><li><a href="https://redbellydao.network/treasury/" target="_blank" rel="noopener">DAO treasury page</a></li><li><a href="https://redbelly.routescan.io" target="_blank" rel="noopener">Routescan explorer</a></li>
+<li><span class="mono">governors.mainnet.redbelly.network</span></li><li>Snapshot blocks <span class="mono">3,025,809</span> → <span class="mono">3,209,414</span></li><li>Data collected 26 Oct 2026</li></ul></div>
+</div></footer>
+<button class="btn icon-btn to-top" type="button" aria-label="Back to top" onclick="window.scrollTo({top:0})"><svg class="ic16 " width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 13V3M4 7l4-4 4 4"/></svg></button>
+<div class="toast" role="status" aria-live="polite"></div><dialog id="verify-dialog" aria-labelledby="v-title"><div class="dlg-head"><h3 id="v-title">Verify</h3><button class="btn icon-btn" id="v-close" type="button" aria-label="Close"><svg class="ic16 " width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13"/></svg></button></div>
+<div class="dlg-body"><p id="v-what"></p>
+<dl class="kv"><dt>RPC method</dt><dd id="v-method"></dd><dt>Block</dt><dd id="v-block"></dd><dt>Published figure</dt><dd id="v-expect"></dd></dl>
+<div class="result" id="v-result" aria-live="polite"></div>
+<div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn btn-primary" id="v-run" type="button">Ask the chain now</button><button class="btn" type="button" data-copy-from="#v-curl"><svg class="ic16 " width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="5" width="9" height="9" rx="1.5"/><path d="M11 5V3.5A1.5 1.5 0 009.5 2h-6A1.5 1.5 0 002 3.5v6A1.5 1.5 0 003.5 11H5"/></svg>Copy command</button></div>
+<pre class="code" id="v-curl"></pre>
+<p style="font-size:12.5px;color:var(--muted)">Your browser sends this request straight to the public Redbelly RPC. Nothing passes through this site.</p></div></dialog><script id="report-data" type="application/json">{"supply":[{"label":"Redbelly reserved wallets","start":5974809361.36208,"end":5930989287.350195,"share_start":0.5983885806702441,"share_end":0.5940715641432724},{"label":"Token vesting contracts","start":1520016418.7510688,"end":1446088105.4022799,"share_start":0.15223255042978753,"share_end":0.14484595757028038},{"label":"Unnamed wallets","start":1834348686.0015526,"end":1973423340.0336423,"share_start":0.1837135279610936,"share_end":0.19766595984772098},{"label":"Other smart contracts","start":614086258.9103354,"end":586408883.3736827,"share_start":0.06150191289026921,"share_end":0.05873705476358317},{"label":"Bridge to other chains","start":38271942.807196,"end":43192466.611256,"share_start":0.0038330082435751407,"share_end":0.004326329884574594},{"label":"Reddex pools: reward funds","start":3299174.6173063344,"end":3525544.694634995,"share_start":0.0003304186455554419,"share_end":0.00035313263095347114}],"supply_change":[{"label":"Unnamed wallets","value":139074654.0320897},{"label":"Bridge to other chains","value":4920523.804060005},{"label":"Reddex pools: reward funds","value":226370.07732866053},{"label":"Other smart contracts","value":-27677375.536652684},{"label":"Redbelly reserved wallets","value":-43820074.01188469},{"label":"Token vesting contracts","value":-73928313.34878898}],"topn":[{"label":"Top 10","start":0.4708291261892545,"end":0.4805785502350613},{"label":"Top 50","start":0.6734391542932836,"end":0.6824763509379844},{"label":"Top 100","start":0.7540377415289494,"end":0.7630689386400321},{"label":"Top 500","start":0.9227994282086353,"end":0.9270198349226638}],"bands":[{"band":"10 \u2013 1K","wallets_start":11749,"rbnt_start":1042371.4709409524,"wallets_end":11834,"rbnt_end":1059433.4877183177,"share_end":0.000536913028828126,"share_start":0.0005683225805841022},{"band":"1K \u2013 10K","wallets_start":1177,"rbnt_start":4536394.437049579,"wallets_end":1207,"rbnt_end":4607992.599934326,"share_end":0.0023352964507255044,"share_start":0.002473336487887653},{"band":"10K \u2013 100K","wallets_start":1226,"rbnt_start":43050519.78978962,"wallets_end":1229,"rbnt_end":43394544.24452662,"share_end":0.021992032963885008,"share_start":0.023472037737500742},{"band":"100K \u2013 1M","wallets_start":852,"rbnt_start":251407222.20160934,"wallets_end":844,"rbnt_end":254207754.86820397,"share_end":0.1288306035255084,"share_start":0.1370724403749469},{"band":"1M \u2013 10M","wallets_start":181,"rbnt_start":473679270.68431365,"wallets_end":184,"rbnt_end":494188715.02557784,"share_end":0.25045117307789905,"share_start":0.2582597787730073},{"band":"10M +","wallets_start":21,"rbnt_start":1060403622.1792215,"wallets_end":23,"rbnt_end":1175735412.1017659,"share_end":0.595853980953154,"share_start":0.5781540840460733}],"tiers":[{"tier":"Top 10","wallets":10,"start":863556834.7879668,"end":882860171.7625087,"change":19303336.974541903,"change_pct":0.022353290712222248,"grew":4,"shrank":2,"about_same":4,"emptied":0,"staked_start":184601890.50473785,"staked_end":210693778.53611505},{"tier":"11 \u2013 50","wallets":40,"start":371610983.33472127,"end":388699774.4736387,"change":17088791.138917446,"change_pct":0.04598569984548884,"grew":18,"shrank":5,"about_same":17,"emptied":1,"staked_start":229369537.7492553,"staked_end":245718221.67665103},{"tier":"51 \u2013 100","wallets":50,"start":147827432.52301767,"end":156710319.79417154,"change":8882887.271153867,"change_pct":0.06008957281843304,"grew":21,"shrank":1,"about_same":28,"emptied":0,"staked_start":84033721.06645906,"staked_end":94370555.32991548},{"tier":"101 \u2013 500","wallets":400,"start":309529083.64468586,"end":306791498.0683825,"change":-2737585.576303363,"change_pct":-0.00884435654339315,"grew":76,"shrank":25,"about_same":299,"emptied":5,"staked_start":108962923.18657027,"staked_end":109903527.87152787},{"tier":"501 \u2013 1,000","wallets":500,"start":87425244.88578439,"end":90058896.36519814,"change":2633651.479413748,"change_pct":0.03012461083585695,"grew":63,"shrank":27,"about_same":410,"emptied":7,"staked_start":17933622.150846396,"staked_end":20614688.895284873}],"daily":{"dates":["2026-06-30","2026-07-01","2026-07-02","2026-07-03","2026-07-04","2026-07-05","2026-07-06","2026-07-07","2026-07-08","2026-07-09","2026-07-10","2026-07-11","2026-07-12","2026-07-13","2026-07-14","2026-07-15","2026-07-16","2026-07-17","2026-07-18","2026-07-19","2026-07-20","2026-07-21","2026-07-22","2026-07-23","2026-07-24","2026-07-25","2026-07-26","2026-07-27","2026-07-28","2026-07-29","2026-07-30","2026-07-31","2026-08-01","2026-08-02","2026-08-03","2026-08-04","2026-08-05","2026-08-06","2026-08-07","2026-08-08","2026-08-09","2026-08-10","2026-08-11","2026-08-12","2026-08-13","2026-08-14","2026-08-15","2026-08-16","2026-08-17","2026-08-18","2026-08-19","2026-08-20","2026-08-21","2026-08-22","2026-08-23","2026-08-24","2026-08-25","2026-08-26","2026-08-27","2026-08-28","2026-08-29","2026-08-30","2026-08-31","2026-09-01","2026-09-02","2026-09-03","2026-09-04","2026-09-05","2026-09-06","2026-09-07","2026-09-08","2026-09-09","2026-09-10","2026-09-11","2026-09-12","2026-09-13","2026-09-14","2026-09-15","2026-09-16","2026-09-17","2026-09-18","2026-09-19","2026-09-20","2026-09-21","2026-09-22","2026-09-23","2026-09-24","2026-09-25","2026-09-26","2026-09-27","2026-09-28","2026-09-29","2026-09-30"],"nolock":[358606856.27849716,359468892.42443144,357789964.7519314,356894057.4449883,356982057.44498825,356064057.4449883,356426664.7928106,356360327.0623215,351359327.0623215,351421232.0623215,351247982.0623215,351197832.2777472,351202832.2777472,351220232.27774715,351583512.27774715,351571012.2777472,351329856.6277472,351356556.6277472,352896991.9859048,352898841.9859048,358120810.3857199,358215938.1704895,358345964.98156154,357275824.9815616,356279624.9815615,356107957.98156154,356352881.61722344,356384270.08772945,355401251.1956801,355753638.573562,363773573.44970906,363681873.449709,363666673.44970906,363800330.64232695,364036230.64232695,364210066.54490167,362315860.04825646,362376137.2554765,362799362.52048576,363326529.2803708,362135729.2803708,362034919.2803708,362283119.4333945,362886369.43339443,362904369.4333945,362571536.4333945,362489670.1050262,362478048.24988604,362037855.3681701,361864664.92186743,361064665.9218675,361298603.44336337,361400653.4433634,362779143.40983385,361782773.93189514,361792703.6765799,359844365.9016894,360368668.99583906,360251588.4633509,432552589.4294187,436295541.2855063,436568453.9342656,436774953.9342656,437151219.3664241,437160112.7664241,437027277.5763623,435559283.89295745,435585287.79118234,435754292.2871806,436028752.28718066,436060776.28978133,441303701.1436789,441307089.14367884,441520149.7099752,441556849.7099752,441331349.7099751,439155849.7099752,439244647.8060408,439319878.07662106,439335253.2225211,439378628.5300442,439648873.5300442,439669373.53004414,440015872.8200442,440525872.82004416,440711821.01019955,440766414.275028,440502114.2750124,440531764.8760208,441347341.2981977,442436218.7802367,441652249.9092804,440677249.90928036],"lock365":[277156292.00327575,278276873.2643302,283036493.3579582,283246493.3579582,283260493.3579582,283241751.03123546,283482792.85086614,283482792.85086614,288556382.8589777,288556382.8589777,288574987.13563126,288574987.13563126,288574987.13563126,288590187.13563126,288594529.9993501,289770929.9993501,288355083.32452756,288355083.32452756,288396583.32452756,288460183.32452756,286458963.32452756,286470963.32452756,286470963.32452756,286620715.3613964,285668545.3613964,285731769.19167817,285655845.48419386,285691605.0841465,285861216.74361306,286187000.1201824,281230000.1201824,281236585.7206047,281241585.7206047,281224385.7206047,282114249.6382074,282231856.3491024,285114017.126796,285187018.51198566,285187018.51198566,285216018.51198566,285435118.51198566,286662818.51198566,286662818.51198566,286759575.5860643,286930323.02901554,287321724.6067512,289013554.6105427,289013554.6105427,289117614.50595284,279328440.6517942,290328440.6517942,290234788.6517942,293165271.39556843,293965271.39556843,294120271.39556843,296751397.89086133,301076558.46444577,301090158.4644458,301090158.4644458,302441685.66492385,302848055.627431,302855255.6274309,302869369.89217967,302864369.89217967,302882369.89217967,303614907.8748992,304377790.0791783,304377790.0791783,304403790.0791783,304497880.06804115,304727005.61994445,304727005.61994445,305367305.6199444,305347305.61994445,305347305.61994445,305347105.6199444,305969822.50160813,306050493.46065503,306115463.46065503,306769299.18926793,306929299.18926793,306829299.18926793,306679299.18926793,306679299.18926793,306173084.18926793,306638178.90702057,308401880.4102084,308845225.1716061,308845225.1716061,311466887.78065014,310495704.80436575,310516414.8043658,310573757.5603491],"vesting":[1520016418.7510688,1519964948.151516,1517966937.1392047,1517866060.9715986,1517816104.1059067,1517022405.265128,1516916316.7284985,1516857979.432387,1516785987.462011,1516724594.3934634,1516703842.9960186,1516679821.8854146,1516634401.7713215,1516613789.5067642,1516519257.2007585,1515259066.5963845,1515176687.2320042,1515076568.3192859,1515044141.265264,1514691275.6772008,1514682459.580891,1514551865.613261,1511575721.3335044,1511539579.7563071,1509133865.1419294,1509130858.002603,1508962839.677382,1508692439.5774498,1508677426.8736954,1508603298.6763673,1507394173.4589508,1507338869.6208894,1507276271.5652707,1507267583.635897,1490020523.109675,1480076014.0118947,1479922756.7290144,1479661385.3391585,1479651956.7795985,1479621926.1150358,1479586012.149969,1478951572.4526632,1478923250.8577003,1478880564.417667,1478870352.2754254,1478508426.6817703,1478490744.430902,1478354633.9725654,1478133105.0648286,1478105124.0333178,1477771726.5585887,1477694291.9459245,1474686676.1450212,1474647510.9210207,1474638484.2206378,1474594319.57884,1474591504.269691,1474575388.7998903,1474559923.6219301,1453587710.7167425,1453566674.7671378,1453559575.931992,1453353104.7952452,1453112744.294199,1453077405.7291622,1452991749.4629474,1452399371.8757842,1452360971.2681928,1452293561.8549294,1452198315.218875,1451330724.0459087,1449061179.9744065,1448483271.504859,1448467336.6397235,1448445598.258242,1448415913.434301,1448395431.9813387,1448335403.8853018,1448261073.31403,1447626442.7029026,1447613242.077201,1447552823.5536122,1447530018.790259,1447507278.5058267,1447491057.351493,1447136548.3749995,1446539710.890703,1446483548.829048,1446417588.049883,1446304134.070493,1446210722.030287,1446199950.4348552,1446088105.4022799],"bridge":[38271942.807196,37239033.666051,37239033.666051,37239033.666051,37084351.619849,37006934.543062,37006934.543062,37076934.543062,37076934.543062,37509459.543062,37509459.543062,37509459.543062,37509459.543062,37427638.481447995,37407267.75375,37407267.75375,37548267.75375,37407293.95415,37178980.906693995,37178980.906693995,37178980.906693995,38158731.906694,38158731.906694,38158731.906694,38158731.906694,38158731.906694,38158731.906694,38271731.906694,38271731.906694,38373281.906694,38578701.906694,38578701.906694,38628701.906694,38709911.906694,39149527.906694,39149527.906694,39149527.906694,39149527.906694,39149527.906694,39388877.906694,39578148.86817499,39578148.86817499,39640848.868175,39906828.868175,40093698.868175,40027962.646442,40027962.646442,40369123.646442,40558943.646441996,40558943.646441996,40608943.646441996,40766523.646442,40766523.646442,41119423.646442,41300839.042368,41449619.042367995,41449619.042367995,41449619.042367995,41584319.042367995,41726138.562368,41726138.562368,41796921.582394,41416149.096825995,41416149.096825995,41466149.096826,41466149.096826,41466149.096826,41466149.096826,41822149.096826,41822149.096826,42055849.096826,42055849.096826,42313979.096825995,42582889.096825995,42582889.096825995,42728439.096826,42962422.096825995,42962522.096826,42836563.293626,42836563.293626,43156428.293626,43156428.293626,43156428.293626,43073755.481496,43073755.481496,43073775.481496,42748509.624881,42748509.624881,42748509.624881,43739981.218377,43739981.218377,42923766.611255996,43192466.611256],"wrbnt":[1819066450.6643627,1818643101.6515698,1816421050.2959785,1816012521.8408637,1815657542.5747054,1814580932.1381395,1814329605.67954,1814053955.7257504,1813912490.190143,1813814102.99186,1813924064.2561107,1813878786.8971825,1813759323.8971825,1813704417.518303,1813614190.06637,1811747317.9017758,1811698436.768608,1811467322.6686082,1811274503.8622565,1810976161.3466423,1811202252.1130657,1810760826.3884375,1807888842.104216,1807033792.336061,1806227759.688216,1806139750.6882157,1805827640.4033813,1805371261.9173028,1805301370.7859592,1805180979.6005294,1805179999.400671,1805084451.880671,1805075886.5852287,1805235459.0452287,1804118486.4569767,1803627784.4977906,1803358460.89517,1802580722.2529588,1802563492.2529588,1802602960.2757866,1802687418.1078043,1801725105.389771,1801752480.040819,1801922186.040819,1802691675.5364175,1802288130.6787457,1802250549.238746,1802381740.3151355,1802236367.0513806,1802097727.9763584,1800134564.5756757,1800583407.1220453,1798692961.9134388,1798381842.4014044,1798665441.4014046,1799023623.612239,1798944046.4271932,1798656054.449821,1798624247.8433785,1725446629.77465,1725340475.6489825,1725242669.3237855,1724810603.3238273,1724315598.5378873,1724236354.3226311,1724206215.4226313,1723658033.4537861,1723575888.7938423,1723067711.061007,1723078594.1620598,1722942388.7920036,1717504573.3689194,1741999482.4309192,1741961847.6005948,1741887626.8176794,1741724638.6006517,1741822791.328236,1741644718.328236,1741394374.8098745,1740584844.8098745,1740763035.396133,1740694895.396133,1740536274.307429,1740361529.7379513,1740228433.514246,1739852347.5947978,1739070206.0298195,1738257140.8075426,1737926443.1965425,1737412274.7292273,1737106136.2372332,1737195248.797233,1736902022.3492532]},"waterfall":[{"label":"1 Jul","value":635763148.281773,"kind":"total","tipLabel":"Staked on 1 Jul"},{"label":"Staked in","value":196366916.82883328,"kind":"up","tipLabel":"Staked during the quarter","note":"489 stake transactions"},{"label":"Withdrawn","value":-80879057.64097671,"kind":"down","tipLabel":"Unstaked during the quarter","note":"157 unstake transactions"},{"label":"30 Sep","value":751251007.4696295,"kind":"total","tipLabel":"Staked on 30 Sep"}],"reserved":[{"wallet":"Ecosystem (Locked)","start":2794132788.0,"end":2294132788.0,"change":-500000000.0},{"wallet":"Ecosystem 2 (Unlocked)","start":377838567.0,"end":624722897.0,"change":246884330.0},{"wallet":"Investors","start":0.0,"end":253115670.0,"change":253115670.0},{"wallet":"Ecosystem (Unlocked)","start":68928602.36207928,"end":25108528.35019522,"change":-43820074.01188405},{"wallet":"Governance (Locked)","start":133333334.0,"end":100000001.0,"change":-33333333.0},{"wallet":"Governance (Unlocked)","start":66666756.0,"end":100000089.0,"change":33333333.0},{"wallet":"TEAM (Locked)","start":333909314.0,"end":333909314.0,"change":0.0},{"wallet":"Reserve","start":2000000000.0,"end":2000000000.0,"change":0.0},{"wallet":"USYD/CSIRO (Locked)","start":200000000.0,"end":200000000.0,"change":0.0}],"eco_out":[{"label":"Wrapped into WRBNT","value":25100000.0,"note":"The WRBNT was then sent on to smart contracts"},{"label":"Staking pools (reward funds)","value":15000000.0,"note":"Plain transfers that top up the pools' reward funds"},{"label":"Unnamed wallets (13)","value":3496669.0,"note":"22 transactions"},{"label":"Other smart contracts","value":200000.0,"note":""},{"label":"Transaction fees","value":15724.23005367072,"note":"Across all 118 transactions it sent"}],"staking_jump":{"date":"2026-08-28","label":"28 Aug: +73.7M in one day"}}</script><script src="assets/js/site.js" defer></script></body></html>

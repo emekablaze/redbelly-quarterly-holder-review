@@ -244,10 +244,16 @@ with open(os.path.join(OUT, "holders_ranked_anonymous.csv"), "w", newline="") as
     w = csv.writer(f); w.writerow(["rank_on_1_jul", "holdings_1_jul", "holdings_30_sep", "staked_1_jul", "staked_30_sep"])
     for i, r in enumerate(ranked[:1000]): w.writerow([i + 1, round(r["start"] / WEI, 6), round(r["end"] / WEI, 6), round(r["staked_start"] / WEI, 6), round(r["staked_end"] / WEI, 6)])
 
+# exact balances (wei) of the publicly named addresses, for the site's live "verify" buttons
+named_wei = {"blocks": {"start": S_BLOCK, "end": E_BLOCK}, "pools": pools, "addresses": {}}
+for a in list(RESERVED) + [WRBNT, BR] + list(POOL.values()):
+    named_wei["addresses"][a] = {k: snap[a][k] for k in ("rbnt_start", "rbnt_end", "wrbnt_start", "wrbnt_end")}
+json.dump(named_wei, open(os.path.join(OUT, "named_balances.json"), "w"), indent=1)
+
 # ---- 9. checks -----------------------------------------------------------------------------
 fees = json.load(open("fees_q3.json"))
 F["fees_q3"] = fees["base_fees_rbnt"]
-F["universe_size"] = len(json.load(open("universe_c.json"))) if os.path.exists("universe_c.json") else len(snap)
+F["universe_size"] = len(json.load(open("universe.json"))) if os.path.exists("universe.json") else len(snap)
 F["addresses_nonzero"] = sum(1 for v in snap.values() if any(int(x) for x in v.values()))
 def ok(b): return "PASS" if b else "FAIL"
 checks = []
@@ -267,16 +273,19 @@ eco_in_top = sum(int(t[5]) for t in tx if t[4] == ECO)
 checks.append(["Ecosystem (Unlocked): start − sent − fees + received = end (RBNT)", ok(eco_s - eco_net - gas + eco_in_top == eco_e),
                f"{eco_s / WEI:,.6f} − {eco_net / WEI:,.6f} − {gas / WEI:,.6f} + {eco_in_top / WEI:,.6f} = {eco_e / WEI:,.6f}"])
 d_total = F["economic_total_start"] - F["economic_total_end"]
-F["unattributed_q3"] = F["fees_q3"] - d_total
-checks.append(["Fall in RBNT read over the quarter vs base fees burned in the quarter", "INFO",
-               f"fall {d_total:,.2f}; fees burned {F['fees_q3']:,.2f}; difference {F['unattributed_q3']:,.2f} RBNT moved in from addresses this method does not reach"])
-if os.path.exists("fees_to_start.json"):
-    burned = json.load(open("fees_to_start.json"))["base_fees_rbnt"]
-    expected = 10_000_000_000 - burned
-    F["burned_to_start"] = burned; F["expected_supply_start"] = expected
-    F["coverage_start"] = F["native_total_start"] / expected
-    checks.append(["RBNT read at block 3025809 vs 10,000,000,000 allocated minus all base fees burned since launch", "INFO",
-                   f"read {F['native_total_start']:,.2f}; expected {expected:,.2f} (burned {burned:,.2f}); coverage {100 * F['coverage_start']:.3f}%"])
+F["fee_credits_q3"] = F["fees_q3"] - d_total
+# credits that are not transactions: addresses that gained RBNT without sending, receiving or being named in any Q3 transaction
+q_named = set()
+for t in tx: q_named.add(t[3]); q_named.add(t[4])
+silent = [int(v["rbnt_end"]) - int(v["rbnt_start"]) for a, v in snap.items() if a not in q_named and not codes.get(a) and int(v["rbnt_end"]) > int(v["rbnt_start"])]
+F["silent_credit_addresses"] = len(silent); F["silent_credit_total"] = sum(silent) / WEI
+checks.append(["Base fees paid in the quarter vs fall in RBNT read", "INFO",
+               f"fees paid {F['fees_q3']:,.2f}; total read fell {d_total:,.2f}; difference {F['fee_credits_q3']:,.2f} paid back out as credits that are not transactions"])
+if os.path.exists("genesis_found.json"):
+    g = json.load(open("genesis_found.json"))
+    F["genesis_total"] = sum(int(v) for _, v in g) / WEI; F["genesis_addresses"] = len(g)
+    checks.append(["All RBNT at genesis (block 0) is held by addresses in the list", ok(F["genesis_total"] == 10_000_000_000),
+                   f"{F['genesis_total']:,.0f} RBNT in {len(g)} address at block 0"])
 F["checks_rows"] = [[c[0], f"<b>{c[1]}</b> · <span class=mono>{c[2]}</span>"] for c in checks]
 with open(os.path.join(OUT, "checks.csv"), "w", newline="") as f:
     w = csv.writer(f); w.writerow(["check", "result", "detail"]); w.writerows(checks)

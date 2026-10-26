@@ -4,7 +4,7 @@ import base64, json, os, datetime
 from charts import paired_hbar, diverging_hbar, stacked_share, columns, fmt_m, RED, SLATE
 
 F = json.load(open("out/figures.json"))
-ASSETS = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "assets")   # brand fonts and logos
+ASSETS = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "site_src", "pdf")   # brand fonts (embedded) and full-size logo
 FONTS = open(os.path.join(ASSETS, "fonts_inline.css")).read()
 LOGO_DARK = base64.b64encode(open(os.path.join(ASSETS, "dao-logo-on-dark.png"), "rb").read()).decode()
 
@@ -167,7 +167,7 @@ dl.gloss dt {{ font-weight: 600; }} dl.gloss dd {{ margin:0; }}
 <section>
 <div class="bar"></div>
 <h2><span class="k">Section 1</span>Where RBNT sits</h2>
-<p>We read the balance of every address that has ever appeared in a Redbelly transaction: {M(F["economic_total_end"])} RBNT at the end of the quarter, out of the 10,000M allocated at launch. Of the difference, {M(F["burned_to_start"] + F["fees_q3"])} has been burned as transaction fees since launch, and about {M(1e10 - F["burned_to_start"] - F["fees_q3"] - F["native_total_end"])} ({P((1e10 - F["burned_to_start"] - F["fees_q3"] - F["native_total_end"]) / 1e10, 2)}) sits in addresses this method cannot reach (see the method section). Here is how much each group held at the start and end of the quarter.</p>
+<p>We read the balance of every address that has ever sent, received or been named in a Redbelly transaction: {M(F["economic_total_end"])} RBNT at the end of the quarter. Here is how much each group held at the start and end of the quarter.</p>
 {figure(1, "Share of all RBNT held by each group", chart_supply, F["text"]["c1"], SRC_SNAP)}
 {table(["Group", "1 Jul 2026", "30 Sep 2026", "Change"], [[LABEL.get(r["category"], r["category"]), M(r["start"]), M(r["end"]), chg(r["change"]) if abs(r["change"]) >= 0.05e6 else "±0.0M"] for r in F["supply_map"] if (r["start"] or r["end"]) and r["category"] != "Zero address"] + [["<b>Total</b>", "<b>" + M(F["economic_total_start"]) + "</b>", "<b>" + M(F["economic_total_end"]) + "</b>", ""]])}
 <div class="plain"><span class="lbl">In plain words</span>{F["text"]["s1_plain"]}</div>

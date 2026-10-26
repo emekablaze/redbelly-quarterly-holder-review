@@ -53,7 +53,7 @@ T["c1"] = (f"Reserved wallets held {P(resv['end'] / total_e)} of all RBNT on 30 
 T["s1_plain"] = (f"Most RBNT is still in wallets Redbelly reserved at launch (team, investors, ecosystem, reserve and others), and in contracts that release tokens over time. "
                  f"During the quarter, about {M(abs(vest['change']) + abs(resv['change']), 0)} RBNT flowed out of those two groups, and unnamed wallets ended up with "
                  f"{M(abs(un['change']), 0)} more. The total went down slightly ({M(F['economic_total_start'] - F['economic_total_end'], 2)}) "
-                 f"because transaction fees on Redbelly are paid to a zero address and so leave circulation. Base fees in the quarter came to {M(fees, 2)} RBNT.")
+                 f"because transaction fees leave the payer's wallet and only part of them ({M(F['fee_credits_q3'], 2)} of {M(fees, 2)}) is paid back out to other addresses.")
 T["c2"] = (f"The 10 largest unnamed wallets held {P(ce['top10_share'])} of all unnamed-wallet RBNT on 30 September, and the 100 largest held {P(ce['top100_share'])}.")
 T["c3"] = ("Most wallets are small. Wallets holding 10 RBNT or less are not shown (see method).")
 small = [b for b in F["bands"] if b["band"] in ("10 – 1K", "1K – 10K")]
@@ -104,7 +104,7 @@ T["s5_plain"] = ("This quarter, the big reserved-wallet moves were transfers bet
 T["method_html"] = (
     "<p><b>Snapshots.</b> Balances were read directly from the Redbelly chain at block <span class=mono>3025809</span> (the last block before 1 July 2026, 30 Jun 23:57:19 UTC) "
     "and block <span class=mono>3209414</span> (the last block of the quarter, 30 Sep 23:57:35 UTC). The treasury page lists original allocations, so it was used only for wallet names and addresses.</p>"
-    "<p><b>Which wallets.</b> Every address that appeared in any transaction from the start of the chain up to 26 October 2026 was checked, along with the WRBNT holder list from Routescan. "
+    "<p><b>Which wallets.</b> Every address that sent, received or was named in any transaction from the first block up to 26 October 2026 was checked, along with the WRBNT holder list from Routescan. "
     f"That is {N(F['universe_size'])} addresses, of which {N(F['addresses_nonzero'])} held RBNT at one of the two blocks.</p>"
     "<p><b>Counting once.</b> A wallet's holdings = its plain RBNT + its WRBNT + the RBNT it has staked in either Reddex pool. "
     "The RBNT inside the WRBNT contract is not counted again, because it is the backing of everyone's WRBNT. "
@@ -113,8 +113,8 @@ T["method_html"] = (
     "(<span class=mono>TokenVestingManager</span>, <span class=mono>RBNTNativeOFTAdapter</span>). Every other wallet is reported only in groups. "
     "A holder is an unnamed wallet with more than 10 RBNT.</p>"
     "<p><b>Checks.</b> The appendix lists the reconciliation checks. WRBNT held = WRBNT supply = RBNT in the WRBNT contract, and the sum of stakers' balances = each pool's <span class=mono>totalStake()</span>. Both match to the wei at both blocks. "
-    + (f"The RBNT read at the start block is {P(F['coverage_start'], 2)} of what should exist (10,000M allocated minus {M(F['burned_to_start'])} burned as fees since launch). " if "coverage_start" in F else "")
-    + f"Over the quarter, the total read fell by {M(F['economic_total_start'] - F['economic_total_end'], 2)} while {M(fees, 2)} was burned as fees. The {M(F['unattributed_q3'], 2)} difference is RBNT that moved in from addresses this method does not reach, such as contracts only ever called by other contracts. It is too small to change any finding.</p>"
+    + f"All 10,000M RBNT started in a single address at block 0, which is in the list. Over the quarter, the total read fell by {M(F['economic_total_start'] - F['economic_total_end'], 2)} while {M(fees, 2)} was paid in transaction fees: "
+    f"the {M(F['fee_credits_q3'], 2)} difference was paid back out to addresses as credits that are not transactions (for example daily credits to a group of 32 addresses).</p>"
     "<p>The full method, scripts and data are in the repository (<span class=mono>METHOD.md</span>, <span class=mono>scripts/</span>, <span class=mono>data/</span>). "
     "Running the same scripts with new snapshot blocks produces the next edition.</p>")
 T["sources_rows"] = [
@@ -137,7 +137,7 @@ json.dump(F, open("out/figures.json", "w"), indent=1)
 
 # ---------------- community summary ----------------
 thread = [
-    f"1/ The first quarterly RBNT holder report is out. It covers Q3 2026 (1 Jul to 30 Sep) and is built only from on-chain data on Redbelly mainnet. Here's what holders did 🧵",
+    f"1/ The first quarterly RBNT holder report is out. It covers Q3 2026 (1 Jul to 30 Sep) and is built only from on-chain data on Redbelly mainnet. Here's what holders did 🧵\nhttps://redbelly-quarterly-holder-review.vercel.app",
     f"2/ Staking {up(st_e - st_s, 'grew', 'shrank')}. {Ms(st_e)} RBNT was staked in the two Reddex pools on 30 Sep, compared with {Ms(st_s)} on 1 Jul ({'+' if st_e >= st_s else '−'}{P(abs(pct(st_s, st_e)))}). That's {P(st_e / total_e)} of all RBNT.",
     f"3/ The biggest wallets mostly held or added. Of the 100 largest unnamed wallets on 1 Jul, {g100} grew, {f100} stayed about the same and {s100} shrank. Staked RBNT counts as held, so staking isn't counted as selling.",
     f"4/ Holdings are still concentrated. The top 10 unnamed wallets held {P(ce['top10_share'])} of unnamed-wallet RBNT (it was {P(cs['top10_share'])}). Wallets holding more than 10 RBNT: {N(cs['holders'])} → {N(ce['holders'])}.",
@@ -154,7 +154,7 @@ summary_paras = [
     f"Redbelly's reserved wallets moved on one day, 10 September, and only between themselves (500M from Ecosystem (Locked) to Ecosystem 2 (Unlocked), {Ms(res['Investors']['change'])} on to Investors, "
     f"and 33.3M between the Governance wallets). The RBNT that left the reserved wallets came from Ecosystem (Unlocked), {Ms(abs(res['Ecosystem (Unlocked)']['change']))} net, "
     f"including 15M added to the staking pools for rewards.",
-    "The report describes what happened on the chain and does not predict prices. The method and data are published so the next edition can be produced the same way.",
+    "The report describes what happened on the chain and does not predict prices. The method and data are published so the next edition can be produced the same way. Full report: https://redbelly-quarterly-holder-review.vercel.app",
 ]
 open("out/community_summary.md", "w").write(
     "# RBNT holders in Q3 2026: community summary\n\n## X thread\n\n" + "\n\n".join(thread) +
