@@ -403,7 +403,7 @@ body_sections = "".join([
 ])
 
 # ---------------- page shell ----------------
-title = "RBNT Holder Report · Q3 2026"
+title = "Redbelly Quarterly Holder"
 desc = f"On-chain report on RBNT holders in Q3 2026: staking {S(staked_e - staked_s)} to {M(staked_e)}, top-10 share {P(ce['top10_share'])}, reserved-wallet flows. Read from Redbelly mainnet, checked to the wei."
 def head(page_title, page_desc, path=""):
     return f'''<!doctype html><html lang="en" data-theme="dark"><head><meta charset="utf-8">
@@ -495,7 +495,7 @@ index = (head(title, desc) + '<body>' + header() + hero + kpis +
 md = markdown.Markdown(extensions=["tables", "fenced_code", "toc"])
 method_html = md.convert(open(os.path.join(ROOT, "METHOD.md")).read()).replace('href="scripts/"', 'href="scripts/README.md"').replace('href="data/"', 'href="data/README.md"')
 dict_html = markdown.markdown(open(os.path.join(ROOT, "data/README.md")).read(), extensions=["tables"]).replace('href="../METHOD.md"', 'href="#top"').replace('href="data/', 'href="data/')
-method_page = (head("Method and data · RBNT Holder Report Q3 2026", "How the RBNT holder report was produced: snapshot blocks, sources, rules, checks and the data dictionary.", "method.html")
+method_page = (head("Method and data · Redbelly Quarterly Holder", "How the RBNT holder report was produced: snapshot blocks, sources, rules, checks and the data dictionary.", "method.html")
                + '<body>' + header(home=False) +
                f'''<div class="shell" style="padding-top:48px;padding-bottom:80px"><main id="content" class="prose doc" style="max-width:860px"><span id="top"></span>
 <p><a href="index.html">← Back to the report</a></p>{method_html}<hr style="border:0;border-top:1px solid var(--edge);margin:48px 0">{dict_html}</main></div>''' + footer + verify_dialog +
