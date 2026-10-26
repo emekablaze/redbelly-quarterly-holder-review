@@ -24,6 +24,7 @@ Each step reads the files written by the steps before it. The snapshot blocks ar
 | 11 | `python3 ../scripts/analyze.py` | `out/*.csv`, `out/figures.json`, `out/checks.csv` | All tables and checks. Every `checks.csv` row must say PASS |
 | 12 | `python3 ../scripts/text.py` | text in `out/figures.json`, `out/community_summary.md` | Plain-language text and the community summary, generated from the figures |
 | 13 | `python3 ../scripts/build_report.py && node ../scripts/render.js $PWD/report/report.html $PWD/report/report.pdf` | `report/report.html`, `report/report.pdf` | The report |
+| 14 | `python3 ../scripts/build_index.py` | `index.html` | Landing page for the repository root |
 
 Helper modules: `rpc.py` (batched JSON-RPC with retries), `charts.py` (brand SVG charts). `block_delta.py` reads every known address at one block and the block before it. It was used to confirm that transaction fees are burned.
 

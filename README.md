@@ -6,6 +6,7 @@ A regular, sourced report on how RBNT holders behave on Redbelly mainnet (chain 
 
 | Path | What it is |
 |---|---|
+| `index.html` | Landing page (homepage when the repository is served as a static site, e.g. on Vercel) |
 | `report/RBNT-Holder-Report-Q3-2026.pdf` | **The report** (A4, with charts) |
 | `report/RBNT-Holder-Report-Q3-2026.html` | The same report as a single self-contained web page |
 | `community/community-summary.md` | **Community summary**: an X thread and a short version in a few paragraphs |
