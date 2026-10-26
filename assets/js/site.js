@@ -456,16 +456,15 @@
     $$(".reveal, .anim").forEach(n => io.observe(n));
   } else $$(".reveal, .anim").forEach(markIn);
 
-  /* ---------------- section index: scroll-spy + progress ---------------- */
+  /* ---------------- section index: scroll-spy ---------------- */
   const links = $$('.toc a[href^="#"], .top-nav a[href^="#"]');
   const sections = Array.from(new Set(links.map(a => a.getAttribute("href")))).map(h => $(h)).filter(Boolean);
   function spy() {
+    /* the section whose top has passed 30% of the viewport, furthest down the page */
     const y = window.scrollY + window.innerHeight * .3;
-    let cur = sections[0];
-    for (const s of sections) if (s.offsetTop <= y) cur = s;
+    let cur = null;
+    for (const s of sections) if (s.offsetTop <= y && (!cur || s.offsetTop > cur.offsetTop)) cur = s;
     for (const a of links) a.classList.toggle("active", a.getAttribute("href") === "#" + (cur && cur.id));
-    const h = document.documentElement.scrollHeight - window.innerHeight;
-    $(".progress").style.transform = `scaleX(${h > 0 ? Math.min(1, window.scrollY / h) : 0})`;
     $(".to-top").classList.toggle("on", window.scrollY > 900);
   }
   let ticking = false;

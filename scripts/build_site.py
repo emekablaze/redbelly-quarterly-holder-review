@@ -434,7 +434,7 @@ def header(home=True):
 <button class="btn icon-btn theme-btn" type="button" aria-label="Switch light or dark theme">{icon("moon")}{icon("sun")}</button>
 <a class="btn btn-primary hide-sm" href="report/RBNT-Holder-Report-Q3-2026.pdf" download>{icon("down")}PDF</a>
 <button class="btn icon-btn menu-btn" type="button" aria-label="Open the section list" aria-expanded="false">{icon("menu")}</button>
-</div></div><div class="progress" aria-hidden="true"></div></header>
+</div></div></header>
 <div class="sheet" aria-label="Sections"><div class="scrim"></div><nav><div style="display:flex;justify-content:space-between;align-items:center"><span class="caps" style="color:var(--muted)">Sections</span><button class="btn icon-btn close" type="button" aria-label="Close">{icon("close")}</button></div>
 <ol>{"".join(f'<li><a href="{pre}#{i}"><span>{n}</span>{E(t)}</a></li>' for i, n, t in NAV)}</ol>
 <a class="btn btn-primary" href="report/RBNT-Holder-Report-Q3-2026.pdf" download style="width:100%;justify-content:center">{icon("down")}Download the PDF</a></nav></div>'''

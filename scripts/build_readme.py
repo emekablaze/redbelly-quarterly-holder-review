@@ -67,7 +67,7 @@ doc = f"""<p align="center">
 
 | | |
 |---|---|
-| **The homepage is the report** | Seven sections in reading order, with a sticky section index, reading progress, deep links to every section and a mobile section menu |
+| **The homepage is the report** | Seven sections in reading order, with a sticky section index, deep links to every section and a mobile section menu |
 | **Interactive charts** | Hover or keyboard focus on any mark for exact values. Arrow keys step through the daily staking chart, one day at a time |
 | **Every chart has a table** | One click switches any chart to its data table, and every chart links to its CSV |
 | **Verify on-chain, live** | Key figures have a `Verify` button. Your browser asks the public Redbelly RPC for the same value at the same block and shows whether it **matches**, with a copy-ready `curl` command |
