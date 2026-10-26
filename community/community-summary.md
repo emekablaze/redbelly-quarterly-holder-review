@@ -2,7 +2,7 @@
 
 ## X thread
 
-1/ The first quarterly RBNT holder report is out. It covers Q3 2026 (1 Jul to 30 Sep) and is built only from on-chain data on Redbelly mainnet. Here's what holders did 🧵
+1/ The first quarterly RBNT holder report is out. It covers Q3 2026 (1 Jul to 30 Sep) and is built only from on-chain data on Redbelly mainnet. Here's what holders did
 https://redbelly-quarterly-holder-review.vercel.app
 
 2/ Staking grew. 751.3M RBNT was staked in the two Reddex pools on 30 Sep, compared with 635.8M on 1 Jul (+18.2%). That's 7.5% of all RBNT.

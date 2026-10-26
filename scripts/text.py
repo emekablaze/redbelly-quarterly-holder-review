@@ -137,7 +137,7 @@ json.dump(F, open("out/figures.json", "w"), indent=1)
 
 # ---------------- community summary ----------------
 thread = [
-    f"1/ The first quarterly RBNT holder report is out. It covers Q3 2026 (1 Jul to 30 Sep) and is built only from on-chain data on Redbelly mainnet. Here's what holders did 🧵\nhttps://redbelly-quarterly-holder-review.vercel.app",
+    f"1/ The first quarterly RBNT holder report is out. It covers Q3 2026 (1 Jul to 30 Sep) and is built only from on-chain data on Redbelly mainnet. Here's what holders did\nhttps://redbelly-quarterly-holder-review.vercel.app",
     f"2/ Staking {up(st_e - st_s, 'grew', 'shrank')}. {Ms(st_e)} RBNT was staked in the two Reddex pools on 30 Sep, compared with {Ms(st_s)} on 1 Jul ({'+' if st_e >= st_s else '−'}{P(abs(pct(st_s, st_e)))}). That's {P(st_e / total_e)} of all RBNT.",
     f"3/ The biggest wallets mostly held or added. Of the 100 largest unnamed wallets on 1 Jul, {g100} grew, {f100} stayed about the same and {s100} shrank. Staked RBNT counts as held, so staking isn't counted as selling.",
     f"4/ Holdings are still concentrated. The top 10 unnamed wallets held {P(ce['top10_share'])} of unnamed-wallet RBNT (it was {P(cs['top10_share'])}). Wallets holding more than 10 RBNT: {N(cs['holders'])} → {N(ce['holders'])}.",
